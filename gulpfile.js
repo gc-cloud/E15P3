@@ -13,4 +13,5 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.coffee('test.coffee'); //note: the parameter is needed
 });

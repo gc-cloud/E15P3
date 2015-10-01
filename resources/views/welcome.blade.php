@@ -35,12 +35,15 @@
                 font-size: 96px;
             }
         </style>
+
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
         <div class="container">
             <div class="content">
                 <p class="title">Hello Visitor!</p>
-                <p class="title">This is a placeholder for P3...</p>
+                <p class="title">This is a placeholder for P3.</p>
+                <a href="http://zudbu.com" class="btn btn-success"> Visit Zudbu</a>
                 <p>Powered by Laravel 5</p>
             </div>
         </div>
