@@ -3,6 +3,7 @@
     <head>
         <title>Laravel</title>
 
+
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <style>
@@ -38,7 +39,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <p class="title">Hello Visitor!</p>
+                <p class="title">This is a placeholder for P3...</p>
+                <p>Powered by Laravel 5</p>
             </div>
         </div>
     </body>
