@@ -6,36 +6,6 @@
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
@@ -43,9 +13,15 @@
             <div class="content">
                 <p class="title">Hello Visitor!</p>
                 <p class="title">This is a placeholder for P3.</p>
+                <p> Test a Bootstrap button</p>
                 <a href="http://zudbu.com" class="btn btn-success"> Visit Zudbu</a>
-                <p>Powered by Laravel 5</p>
+                <p> Test a Laravel button</p>
+                {!! Form::submit('Submit!') !!}
+                <p> Test a Laravel button with Bootstrap styling</p>
+                {!!Form::submit('Submit', ['class' => 'btn btn-success'],[link_to('http://zudbu.com')])!!}
             </div>
+            <p>Powered by Laravel 5</p>
         </div>
+
     </body>
 </html>
