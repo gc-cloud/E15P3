@@ -1,6 +1,7 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-/*Add site specific CSS*/
+/* Add site specific CSS.  After compiling with Elixir (Gulp) this code will be available
+in  public\css\app.css */
 html, body {
     height: 100%;
 }
