@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
+});
+
+Route::get('/textgenerator', function () {
+  //  return view('names');
+  return 'page to generate text';
+});
+Route::get('/usergenerator', function () {
+    //return view('names');
+    return 'page to generate users';
+});
+Route::get('/passwordgenerator', function () {
+    return 'page to generate passwords';
 });

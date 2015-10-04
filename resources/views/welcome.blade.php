@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<!--html>
     <head>
         <title>Laravel</title>
 
@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+
+      <img src="https://www.flickr.com/photos/21644167@N04/6693329889/"" class="img-rounded">
         <div class="container">
             <div class="content">
                 <p class="title">Hello Visitor!</p>
@@ -24,4 +26,17 @@
         </div>
 
     </body>
-</html>
+</html-->
+
+@extends('layouts.master')
+<p> this is the welcome blade</p>
+<!--
+@section('summary')
+    <p class="title">This is the summary of this page .</p>
+    <h1> Hello There!</h1>
+@endsection
+
+@section('content')
+    <p>This is my body content.</p>
+@endsection
+-->

@@ -11,7 +11,7 @@ class NamesSeeder extends Seeder
      */
     public function run()
     {
-        //
+
         DB::table('names')->insert(array(
           array('id'=>1, 'name'=>'Stephen'),
           array('id'=>2, 'name'=>'Jody'),
