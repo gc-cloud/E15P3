@@ -7,17 +7,17 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "illuminate/html": "5.*"
+        "illuminate/html": "5.*",
+        "laravelcollective/html":"5.1.*"
     },
-    "require":{
-      "laravelcollective/html":"5.1.*"
-    },
+
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "phpspec/phpspec": "~2.1"
     },
+
     "autoload": {
         "classmap": [
             "database"
@@ -26,11 +26,13 @@
             "App\\": "app/"
         }
     },
+
     "autoload-dev": {
         "classmap": [
             "tests/TestCase.php"
         ]
     },
+
     "scripts": {
         "post-install-cmd": [
             "php artisan clear-compiled",
@@ -49,6 +51,7 @@
             "php artisan key:generate"
         ]
     },
+    
     "config": {
         "preferred-install": "dist"
     }

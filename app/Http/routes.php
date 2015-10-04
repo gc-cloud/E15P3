@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
+Route::get('/','HomeController@getIndex');
 
-Route::get('/textgenerator', function () {
-  return view('textGenerator');
-});
+Route::get('/textgenerator', 'TextGeneratorController@getIndex');
 
-Route::get('/usergenerator', function () {
-  return view('userGenerator');
-});
+Route::get('/usergenerator', 'UserGeneratorController@getIndex');
 
-Route::get('passwordgenerator', function () {
-  return view('passwordGenerator');
-});
+Route::get('passwordgenerator', 'PasswordGeneratorController@getIndex');
 
-Route::get('acknowledgements', function () {
-  return view('acknowledgements');
-});
+Route::get('acknowledgements', 'AcknowledgementsController@getIndex');
