@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -46,7 +48,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="textgenerator">Text Generator</a></li>
-                <li><a href="#about"></a></li>
+                <li><a href="textgenerator"></a></li>
                 <li><a href="usergenerator">User Generator</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Stuff <span class="caret"></span></a>
@@ -76,17 +78,19 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="first-slide" src="images/paperGray.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Text Generator.</h1>
-              <p>Create random text that sounds like it was made by the original author!.</p>
+              <p>Create random text that sounds as if it was written by the original author!.</p>
               <p><a class="btn btn-lg btn-primary" href="textgenerator" role="button">Check it out!</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <!--img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"-->
+          <img class="second-slide" src="images/grayPeople.gif" alt="Second slide">
+
           <div class="container">
             <div class="carousel-caption">
               <h1>User Generator.</h1>
@@ -96,7 +100,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="images/keys.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Password Generator.</h1>
@@ -127,23 +131,23 @@
       <div class="row">
         <div class="col-lg-4">
           <!--img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"-->
-          <img class="img-circle" src="images/logo.png" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="images/randomText.jpg" alt="we are random" width="140" height="140">
 
-          <h2>To be or..</h2>
+          <h2>Text Generator</h2>
           <p>To be or yite, the question that fields. A ghost is thy future</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="textgenerator" role="button">Generate Text &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Pancho Villa</h2>
-          <p>My name is Francisco.  I was born in 1910. I don't like trouble</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <img class="img-circle" src="images/person1.jpg" alt="random user" width="140" height="140">
+          <h2>User Generator</h2>
+          <p>My name is Pietra.  I was born in 1910. I don't like trouble.</p>
+          <p><a class="btn btn-default" href="usergenerator" role="button">New User &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Today's Password</h2>
-          <p>ThatIsFastBycicle!.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <img class="img-circle" src="images/oldLock.jpg" alt="random password" width="140" height="140">
+          <h2>Password Generator</h2>
+          <p>ThatIs1FastBycicle!.</p>
+          <p><a class="btn btn-default" href="passwordgenerator" role="button">New Password &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 @show
