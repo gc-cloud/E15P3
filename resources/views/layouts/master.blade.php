@@ -47,16 +47,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="textgenerator">Text Generator</a></li>
-                <li><a href="textgenerator"></a></li>
+                <!-- Note to me: need to fix active class based on URL-->
+                <!--li class="active"><a href="textgenerator">Text Generator</a></li-->
+                <li><a href="textgenerator">Text Generator</a></li>
                 <li><a href="usergenerator">User Generator</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Stuff <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="passwordgenerator">Password Generator</a></li>
-                    <li><a href="acknowledgements">Acknowledgements</a></li>
-                  </ul>
-                </li>
+                <li><a href="passwordgenerator">Password Generator</a></li>
               </ul>
             </div>
           </div>
@@ -66,9 +61,10 @@
     </div>
 
 
+    <!-- Carousel
+    ================================================== -->
     @section ('top')
-        <!-- Carousel
-        ================================================== -->
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -118,8 +114,9 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div><!-- /.carousel -->
+    </div>
 @show
+<!-- /.carousel -->
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -131,7 +128,7 @@
       <div class="row">
         <div class="col-lg-4">
           <!--img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"-->
-          <img class="img-circle" src="images/randomText.jpg" alt="we are random" width="140" height="140">
+          <img class="img-circle" src="images/randomText.gif" alt="we are random" width="140" height="140">
 
           <h2>Text Generator</h2>
           <p>To be or yite, the question that fields. A ghost is thy future</p>
@@ -140,7 +137,7 @@
         <div class="col-lg-4">
           <img class="img-circle" src="images/person1.jpg" alt="random user" width="140" height="140">
           <h2>User Generator</h2>
-          <p>My name is Pietra.  I was born in 1910. I don't like trouble.</p>
+          <p>My name is Pietra.  I was born in 1987. I don't like trouble.</p>
           <p><a class="btn btn-default" href="usergenerator" role="button">New User &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
@@ -156,7 +153,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Zudbu.</p>
+        <p><a href="http://www.zudbu.com">&copy; 2015 Zudbu.</p>
       </footer>
 
     </div><!-- /.container -->
