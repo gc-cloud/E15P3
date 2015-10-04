@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PasswordGeneratorRequest;
 
 class PasswordGeneratorController extends Controller
 {
@@ -15,9 +16,18 @@ class PasswordGeneratorController extends Controller
      */
     public function getIndex()
     {
+
         return view('passwordGenerator');
     }
 
+    /**
+     * Handle page load through post
+     *
+     */
+    public function postIndex()
+    {
+        return view('passwordGenerator');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,9 +54,12 @@ class PasswordGeneratorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PasswordGeneratorRequest $request)
     {
-        //
+      $message='Your new password is: ';
+      $newPassword= 'ThisIs1CrazyCow!';
+      $name= 'Gerardo';
+      return view('passwordgenerator', compact('message','newPassword','name'));
     }
 
     /**

@@ -39,7 +39,7 @@
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
-              <a class="navbar-brand pull-left" href="/"><img class="img-rounded pull-right" src="images/logo2.png" alt="random user" width="100" height="25" ></a>
+              <a class="navbar-brand pull-left" href="/">DWA15-P3</a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
