@@ -32,7 +32,6 @@
   <body>
     <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
@@ -42,23 +41,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">CSCIE P3</a>
+              <a class="navbar-brand" href="/">Home</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Random Text</a></li>
+                <li class="active"><a href="textgenerator">Text Generator</a></li>
                 <li><a href="#about"></a></li>
-                <li><a href="#contact">Random Users</a></li>
+                <li><a href="usergenerator">User Generator</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Stuff <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Random Password</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="passwordgenerator">Password Generator</a></li>
+                    <li><a href="acknowledgements">Acknowledgements</a></li>
                   </ul>
                 </li>
               </ul>
@@ -70,8 +64,9 @@
     </div>
 
 
-    <!-- Carousel
-    ================================================== -->
+    @section ('top')
+        <!-- Carousel
+        ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -84,9 +79,9 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Random Text Generator.</h1>
+              <h1>Text Generator.</h1>
               <p>Create random text that sounds like it was made by the original author!.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <p><a class="btn btn-lg btn-primary" href="textgenerator" role="button">Check it out!</a></p>
             </div>
           </div>
         </div>
@@ -94,9 +89,9 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Random User Generator.</h1>
+              <h1>User Generator.</h1>
               <p>Create fake users for testing, posing or for fun!</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <p><a class="btn btn-lg btn-primary" href="usergenerator" role="button">Create</a></p>
             </div>
           </div>
         </div>
@@ -104,9 +99,9 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Other Stuff.</h1>
-              <p>Take a look at our cool password generator.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <h1>Password Generator.</h1>
+              <p>Generate a hard to crack password that you can remember!.</p>
+              <p><a class="btn btn-lg btn-primary" href="passwordgenerator" role="button">New Password</a></p>
             </div>
           </div>
         </div>
@@ -120,18 +115,20 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-
+@show
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
+@section ('content')
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <!--img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"-->
+          <img class="img-circle" src="images/logo.png" alt="Generic placeholder image" width="140" height="140">
+
           <h2>To be or..</h2>
           <p>To be or yite, the question that fields. A ghost is thy future</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -149,13 +146,13 @@
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
+@show
 
 
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Zudbu. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2015 Zudbu.</p>
       </footer>
 
     </div><!-- /.container -->

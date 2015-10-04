@@ -16,13 +16,17 @@ Route::get('/', function () {
 });
 
 Route::get('/textgenerator', function () {
-  //  return view('names');
-  return 'page to generate text';
+   return view('textgenerator');
 });
+
 Route::get('/usergenerator', function () {
-    //return view('names');
-    return 'page to generate users';
+    return view('userGenerator');
 });
+
 Route::get('/passwordgenerator', function () {
-    return 'page to generate passwords';
-});
+    return view('passwordgenerator');
+  });
+
+  Route::get('/acknowledgements', function () {
+      return view('acknowledgements');
+    });
