@@ -59,7 +59,7 @@ class PasswordGeneratorController extends Controller
       $message='Your new password is: ';
       $newPassword= 'ThisIs1CrazyCow!';
       $name= 'Gerardo';
-      return view('passwordgenerator', compact('message','newPassword','name'));
+      return view('passwordGenerator', compact('message','newPassword','name'));
     }
 
     /**
