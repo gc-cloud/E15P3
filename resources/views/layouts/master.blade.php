@@ -35,15 +35,9 @@
   <body>
 
     <div class="navbar-wrapper">
-      <header>
-
-      </header>
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top">
-
           <div class="container">
-
             <div class="navbar-header">
               <a class="navbar-brand pull-left" href="/"><img class="img-rounded pull-right" src="images/logo2.png" alt="random user" width="100" height="25" ></a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -52,7 +46,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <!--a class="navbar-brand" href="/"><img class="img-circle" src="images/person1.jpg" alt="random user" width="40" height="40"></a-->
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -65,7 +58,6 @@
             </div>
           </div>
         </nav>
-
       </div>
     </div>
 
@@ -78,13 +70,11 @@
     <!-- /.carousel -->
 
 
-    <!-- Manin content. Suggested usage: forms, form output
+    <!-- Main content. Suggested usage: forms, form output
     ========================================================= -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="jumbotron">
       @yield('content')
-    </div>
-
+    <!-- /.jumbotron -->
 
       <!-- FOOTER
       ========================================================= -->
@@ -93,7 +83,8 @@
         <p><a href="http://www.zudbu.com">&copy; 2015 Zudbu.</p>
       </footer>
 
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -102,7 +93,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="assets/js/vendor/holder.min.js"></script>
+    <!--script src="assets/js/vendor/holder.min.js"></script-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

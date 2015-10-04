@@ -15,7 +15,8 @@
   </div>
 @endsection
 
-
 @section('content')
-  <p>This is where we put the results of the passwordgenerator generator.</p>
+<div class="jumbotron">
+  <p>This is where we put the results of the password generator.</p>
+</div>
 @endsection

@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section ('carousel')
-
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -19,9 +18,7 @@
       </div>
     </div>
     <div class="item">
-      <!--img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"-->
       <img class="second-slide" src="images/grayPeople.gif" alt="Second slide">
-
       <div class="container">
         <div class="carousel-caption">
           <h1>User Generator.</h1>
@@ -53,13 +50,10 @@
 
 @section ('content')
     <div class="container marketing">
-
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <!--img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"-->
           <img class="img-circle" src="images/randomText.gif" alt="we are random" width="140" height="140">
-
           <h2>Text Generator</h2>
           <p>To be or yite, the question that fields. A ghost is thy future</p>
           <p><a class="btn btn-default" href="textgenerator" role="button">Generate Text &raquo;</a></p>

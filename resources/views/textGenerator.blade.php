@@ -15,7 +15,8 @@
   </div>
 @endsection
 
-
 @section('content')
+<div class="jumbotron">
   <p>This is where we put the results of the text generator.</p>
+</div>
 @endsection
