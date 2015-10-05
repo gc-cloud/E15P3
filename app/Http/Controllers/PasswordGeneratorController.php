@@ -44,9 +44,9 @@ class PasswordGeneratorController extends Controller
       /* If set, get user defined values for number of words, numbers and
        * special characters, otherwise set defaults. These values are used to set sticky
        * fields in the submitting forms*/
-       $numberCount = 4;
-       $wordCount = 1;
-       $specialCharacterCount = 1;
+       $numberCount = 0;
+       $wordCount = 4;
+       $specialCharacterCount = 0;
        $camelCase="true";
 
       /* Call the addElements function to select words, numbers and special characters */
