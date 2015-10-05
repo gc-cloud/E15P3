@@ -1,6 +1,6 @@
 <?php
 
-namespace App\helpers;
+namespace App\Helpers;
 
   /* Define data structures. The content of these arrays is used to select
   valid values to generate a password. There is one array for each data type.

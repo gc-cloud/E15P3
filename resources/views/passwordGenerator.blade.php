@@ -75,7 +75,7 @@
     </div>
     <div class="row">
       <!-- Display success message with new password-->
-        <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($newPassword)) {{$newPassword}} @endif</h3>
+        <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($password)) {{$password}} @endif</h3>
         <a href='http://xkcd.com/936/' class="alink">Inspiration : xkcd archive</a>
     </div>
 
