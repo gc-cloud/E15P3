@@ -6,18 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PasswordGeneratorRequest;
-use App\Helpers\PasswordGeneratorData; // Data class
+use App\Helpers\PasswordGeneratorData; // Class holding all the valid values
 
 
 class PasswordGeneratorController extends Controller
 {
-
-   /* Methods
-    * ------------------------------------------------------------------------------*/
-  /* Create a generic method to select random elements form a source
+  /*  Select random elements form a source
    * (for example: specialCharacters,numbers,wordCorpus) and then add the
    * elements to a destination (arguably the password array). If $camelCase is true then
-   * each element start with an uppercase.  Finally, this function handles
+   * each element start with an uppercase.  This function handles
    * the special cases of 1 element (not an array) and 0 elements (ignore)
    */
     public function addElements ($source, &$destination, $count, $camelCase)
@@ -26,11 +23,11 @@ class PasswordGeneratorController extends Controller
         $randomKeys  = array_rand($source, $count);
         if (count($randomKeys) == 1){
           /* If only one element, array_rand returns an integer, not an array */
-          ($camelCase=="true")? $destination[] = ucfirst($source[$randomKeys]) : $destination[] = $source[$randomKeys];
+          ($camelCase=='true')? $destination[] = ucfirst($source[$randomKeys]) : $destination[] = $source[$randomKeys];
         } else {
           /* If elements <> 0,1 then we have an array of results */
           foreach ($randomKeys as $randomKey) {
-            ($camelCase=="true")?  $destination[] = ucfirst($source[$randomKey]) :$destination[] = $source[$randomKey];
+            ($camelCase=='true')?  $destination[] = ucfirst($source[$randomKey]) :$destination[] = $source[$randomKey];
            }
         }
     }
@@ -40,24 +37,21 @@ class PasswordGeneratorController extends Controller
      */
     public function generatePassword(PasswordGeneratorRequest $request)
     {
-
       /* Initialize password array.  This array will hold the values selected for special
        * characters, numbers and words*/
        $password = array();
 
-      /* If set, get user defined values for number of words, numbers and
-       * special characters, otherwise set defaults. These values are used to set sticky
-       * fields in the submitting forms*/
-       !empty($request->get('wordCount'))? $wordCount = $request->get('wordCount'):$wordCount= 3;
-       !empty($request->get('numberCount'))? $numberCount = $request->get('numberCount'):$numberCount= 1;
-       !empty($request->get('specialCharacterCount'))? $specialCharacterCount = $request->get('specialCharacterCount'):$specialCharacterCount= 1;
-       !empty($request->get('camelCase'))? $camelCase = $request->get('camelCase'):$camelCase= "true";
-
+      /* Use Laravel's request->input method to  get user defined values for number of words,
+       * numbers and special characters, or set defaults. */
+       $wordCount=$request->input('wordCount',3);
+       $numberCount=$request->input('numberCount',1);
+       $specialCharacterCount=$request->input('specialCharacterCount',1);
+       $camelCase=$request->input('camelCase','false');
 
       /* Call the addElements function to select words, numbers and special characters */
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password,$wordCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$numbers, $password,$numberCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$specialCharacters, $password,$specialCharacterCount, $camelCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password, $wordCount, $camelCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$numbers, $password, $numberCount, $camelCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$specialCharacters, $password, $specialCharacterCount, $camelCase);
 
        /* At this point, the $password array has a list of randomly selected
         * specialCharacters, numbers and words. However, they are in the order that the
@@ -67,7 +61,8 @@ class PasswordGeneratorController extends Controller
         shuffle($password);
         $password = implode($password);
         $message = "Your new password is: ";
+        $request->flash(); // Send original values back to form
         return view('passwordGenerator',
-        compact('password','message','numberCount','wordCount','specialCharacterCount','camelCase'));
+        compact('password','message'));
     }
 }

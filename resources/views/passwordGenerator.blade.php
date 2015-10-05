@@ -54,7 +54,7 @@
       </div>
       <div class="row">
         <div class="col-sm-2">
-          {!!Form::checkbox('camelCase', 'true', true) !!}
+          {!!Form::checkbox('camelCase', 'true', false) !!}
         </div>
         <div class="col-sm-6">
           <label>Use CamelCase</label>

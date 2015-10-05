@@ -18,6 +18,10 @@ settings took place:
 - The n-gram algorithm
 uses maps and vector collections and selects words based on the probability of a particular word being used in the provided text file
 Preloaded n-grams include works from Hamlet, The Beatles and ___ This algorithm.  
+- Flow is from request -> routes -> controller -> view
+- Custom classes and methods to support passwordgenerator
+- Used Laravel's http requests methods for form handling and stickiness 
+
 
 
 ## Official Documentation
