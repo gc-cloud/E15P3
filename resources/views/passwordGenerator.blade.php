@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('carousel')
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -37,7 +38,7 @@
 
     <div class="row">
       <div class="col-sm-2">
-          {!! Form::select('wordCount', [1,2,3,4,5,6]) !!}
+          {!! Form::select('wordCount', array('1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5),4) !!}
       </div>
       <div class="col-sm-6">
         <label for='wordCount'># of Words</label>
@@ -45,7 +46,7 @@
     </div>
     <div class="row">
       <div class="col-sm-2">
-        {!! Form::select('numberCount', [1,2,3,4,5,6]) !!}
+        {!! Form::select('numberCount', array('0'=>0,'1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5)) !!}
       </div>
       <div class="col-sm-6">
         <label for='numberCount'># of Numbers</label>
@@ -53,7 +54,7 @@
     </div>
     <div class="row">
       <div class="col-sm-2">
-        {!! Form::select('specialCharacterCount', [1,2,3,4,5,6]) !!}
+        {!! Form::select('specialCharacterCount', array('0'=>0,'1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5)) !!}
       </div>
       <div class="col-sm-6">
         <label for='specialCharacterCount'># of Special Characters</label>
@@ -73,10 +74,8 @@
       </div>
     </div>
     <div class="row">
-      <!-- Display success message -->
-        <h3>@if(!empty($message)) {{$message}} @endif</h3>
-        <h3 class="password"> @if(!empty($newPassword)) {{$newPassword}} @endif</h3>
-        <br/>
+      <!-- Display success message with new password-->
+        <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($newPassword)) {{$newPassword}} @endif</h3>
         <a href='http://xkcd.com/936/' class="alink">Inspiration : xkcd archive</a>
     </div>
 
