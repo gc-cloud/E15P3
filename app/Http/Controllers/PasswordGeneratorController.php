@@ -11,6 +11,9 @@ use App\Helpers\PasswordGeneratorData; // Data class
 
 class PasswordGeneratorController extends Controller
 {
+
+   /* Methods
+    * ------------------------------------------------------------------------------*/
   /* Create a generic method to select random elements form a source
    * (for example: specialCharacters,numbers,wordCorpus) and then add the
    * elements to a destination (arguably the password array). If $camelCase is true then
@@ -33,56 +36,23 @@ class PasswordGeneratorController extends Controller
     }
 
     /**
-     * Handle page load through get
+     * Handle password generation for all methods
      */
-    public function get(PasswordGeneratorRequest $request)
+    public function generatePassword(PasswordGeneratorRequest $request)
     {
+
       /* Initialize password array.  This array will hold the values selected for special
-      characters, numbers and words*/
-      $password = array();
+       * characters, numbers and words*/
+       $password = array();
 
       /* If set, get user defined values for number of words, numbers and
        * special characters, otherwise set defaults. These values are used to set sticky
        * fields in the submitting forms*/
-       $numberCount = 0;
-       $wordCount = 4;
-       $specialCharacterCount = 0;
-       $camelCase="true";
+       !empty($request->get('wordCount'))? $wordCount = $request->get('wordCount'):$wordCount= 3;
+       !empty($request->get('numberCount'))? $numberCount = $request->get('numberCount'):$numberCount= 1;
+       !empty($request->get('specialCharacterCount'))? $specialCharacterCount = $request->get('specialCharacterCount'):$specialCharacterCount= 1;
+       !empty($request->get('camelCase'))? $camelCase = $request->get('camelCase'):$camelCase= "true";
 
-      /* Call the addElements function to select words, numbers and special characters */
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password,$wordCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$numbers, $password,$numberCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$specialCharacters, $password,$specialCharacterCount, $camelCase);
-
-       /* At this point, the $password array has a list of randomly selected
-        * specialCharacters, numbers and words. However, they are in the order that the
-        * elements were selected.  We use the shuffle function to scramble the elements
-        * and then transform to a string with implode()
-        */
-        shuffle($password);
-        $password = implode($password);
-        $message = "Your new password is: ";
-        return view('passwordGenerator',
-        compact('password','message','numberCount','wordCount','specialCharacterCount','camelCase'));
-      return view('passwordGenerator');
-    }
-
-    /**
-     * Handle page load through post
-     */
-    public function post(PasswordGeneratorRequest $request)
-    {
-      /* Initialize password array.  This array will hold the values selected for special
-      characters, numbers and words*/
-      $password = array();
-
-      /* If set, get user defined values for number of words, numbers and
-       * special characters, otherwise set defaults. These values are used to set sticky
-       * fields in the submitting forms*/
-       $numberCount = $request->get('numberCount');
-       $wordCount = $request->get('wordCount');
-       $specialCharacterCount = $request->get('specialCharacterCount');
-       $camelCase=$request->get('camelCase');
 
       /* Call the addElements function to select words, numbers and special characters */
         PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password,$wordCount, $camelCase);

@@ -23,6 +23,6 @@ Route::get('acknowledgements', 'AcknowledgementsController@getIndex');
 
 /* Define route aliases */
 Route::get('passwordgenerator',
-  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@get']);
+  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
 Route::post('passwordgenerator',
-  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@post']);
+  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
