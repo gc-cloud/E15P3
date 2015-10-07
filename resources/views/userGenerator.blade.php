@@ -7,8 +7,7 @@
       <div class="container">
         <div class="carousel-caption">
           <h1>User Generator.</h1>
-          <p>Click  on the button to create a new user. It is fun!</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          <p>Select your desired user characteristics and build it. It is fun!</p>
         </div>
       </div>
     </div>
@@ -16,7 +15,16 @@
 @endsection
 
 @section('content')
-<div class="jumbotron">
-  <p>This is where we put the results of the user generator.</p>
+<div class="container">
+
+  <div class="jumbotron">
+  {!! Form::open(array('route' => 'usergenerator', 'class' => 'form')) !!}
+    <!-- Display new user-->
+    @if(!empty($photo))  {!! HTML::image('images/'.$photo , 'a picture', array('class'=>'img-circle', 'width'=>'140', 'height'=>'140')) !!} @endif
+    <p> @if(!empty($fullName)) {{$fullName}} @endif</p>
+    <p> @if(!empty($hobby)) {{$hobby}} @endif</p>
+    {!! Form::submit('New User Please', array('class'=>'btn btn-primary')) !!}
+  {!! Form::close() !!}
+  </div>
 </div>
 @endsection

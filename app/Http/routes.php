@@ -15,14 +15,13 @@ Route::get('/','HomeController@getIndex');
 
 Route::get('/textgenerator', 'TextGeneratorController@getIndex');
 
-Route::get('/usergenerator', 'UserGeneratorController@getIndex');
+//Route::get('/usergenerator', 'UserGeneratorController@getIndex');
 
-/*Route::get('passwordgenerator', 'PasswordGeneratorController@getIndex');*/
+//Route::match(['get','post'],'/usergenerator', 'UserGeneratorController@generateUser');
+Route::match(['get','post'],'usergenerator',
+    ['as' => 'usergenerator', 'uses' => 'UserGeneratorController@generateUser']);
 
 Route::get('acknowledgements', 'AcknowledgementsController@getIndex');
 
-/* Define route aliases */
-Route::get('passwordgenerator',
-  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
-Route::post('passwordgenerator',
-  ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
+Route::match(['get','post'],'passwordgenerator',
+    ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);

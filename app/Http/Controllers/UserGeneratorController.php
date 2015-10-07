@@ -8,6 +8,41 @@ use App\Http\Controllers\Controller;
 
 class UserGeneratorController extends Controller
 {
+
+
+
+public  function generateUser(){
+  //  function generateUser($lastNames,){
+   $lastNames = ['Smith','Perez','Castaneda','Buck', "Basch"];
+   $firstNames = ["Pedro","Dave","Jerry","Sue","Adela"];
+   $hobbies = ["Skiing","Music","Baseball", "Writing"];
+   $photos = ["person1.jpg","person2.jpg","person3.jpg","person4.jpg","person5.jpg","person6.jpg","person7.jpg"
+   ,"person8.jpg","person9.jpg","person10.jpg","person11.jpg","person12.jpg","person13.jpg","person14.jpg"];
+
+
+    //$userData = [null];
+
+    //Select random values
+      $randomLastName= array_rand($lastNames);
+      $randomFirstName = array_rand($firstNames);
+      $randomHobby = array_rand($hobbies);
+      $randomPhoto = array_rand($photos);
+
+      //Build random user
+      $fullName[] = $firstNames[$randomFirstName]. " ";
+      $fullName[] = $lastNames[$randomLastName]. ". ";
+      $hobby[] = $hobbies[$randomHobby].".";
+      $photo = $photos[$randomPhoto];
+
+      // Transfor array to string and return to view
+      $fullName = implode($fullName);
+      $hobby = implode($hobby);
+    //  $photo = implode($photo);
+    //  echo $fullName. "<br>" . $hobby;
+      return view('userGenerator',
+      compact('fullName','hobby','photo') );
+
+  }
   /**
    * Handle page load through get
    *

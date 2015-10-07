@@ -28,6 +28,8 @@
         @endforeach
     </ul> -->
     {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
+
+
       <div class="row">
         <div class="col-sm-2">
             {!! Form::select('wordCount', array('1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5),3) !!}
