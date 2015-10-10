@@ -36,7 +36,7 @@ Documentation for the framework can be found on the [Laravel website](http://lar
 - Images:
   - person1.jpg flickr Lorena by Noval Goya
   - person2.jpg to person3.jpg: (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons (except when noted)
-  - person2.jpg by Tonybog , Own work. Licensed under CC BY-SA 4.0 via Wikimedia Commons - https://commons.wikimedia.org/wiki/File:35f38f5.jpg#/media/File:35f38f5.jpg
+  - person2.jpg by Tonybog  
   - person 3.jpg By Academic9
   - person4.jpg By Siavash.aghdaie
   - person5.jpg By tahseen_libra
@@ -45,6 +45,6 @@ Documentation for the framework can be found on the [Laravel website](http://lar
   - person8.jpg By Ibrahim0805
   - person9.jpg By Aaron bushkowsky
   - person10.jpg By Anna Marcello
-  - person11.jpg By Sandrojhonston (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons
+  - person11.jpg By Sandrojhonston 
   - person12.jpg By Jorge Arriagada (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons
   - person13.jpg By MirreNL  - person14.jpg By Tabercil (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
