@@ -16,7 +16,13 @@
 @endsection
 
 @section('content')
+
 <div class="jumbotron">
-  <p>This is where we put the results of the text generator.</p>
+  <!-- Display success message with new password-->
+    <h3>This is where we put the results of the text generator.</p>
+    <h3>@if(!empty($message)) {{$message}} @endif</h3>
+    <p>@if(!empty($randomText)) {{$randomText}} @endif</p>
+
 </div>
+
 @endsection

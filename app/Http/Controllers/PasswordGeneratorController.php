@@ -17,7 +17,7 @@ class PasswordGeneratorController extends Controller
    * each element start with an uppercase.  This function handles
    * the special cases of 1 element (not an array) and 0 elements (ignore)
    */
-    public function addElements ($source, &$destination, $count, $camelCase)
+    private function addElements ($source, &$destination, $count, $camelCase)
     {
         if ($count==0) return; /* if no elements we do nothing */
         $randomKeys  = array_rand($source, $count);
@@ -35,7 +35,7 @@ class PasswordGeneratorController extends Controller
     /**
      * Handle password generation for all methods
      */
-    public function generatePassword(PasswordGeneratorRequest $request)
+    function generatePassword(PasswordGeneratorRequest $request)
     {
       /* Initialize password array.  This array will hold the values selected for special
        * characters, numbers and words*/
@@ -62,7 +62,11 @@ class PasswordGeneratorController extends Controller
         $password = implode($password);
         $message = "Your new password is: ";
         $request->flash(); // Send original values back to form
-        return view('passwordGenerator',
-        compact('password','message'));
+        return view('passwordGenerator',compact('password','message'));
+    }
+
+    public function destroy($id)
+    {
+        //
     }
 }
