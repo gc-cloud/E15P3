@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TextGeneratorRequest;
 use App\Helpers\TextGeneratorData; // Class holding all the valid values
+use App\Helpers\hamletData; // Class holding all the valid values
 
 class TextGeneratorController extends Controller
 {
@@ -15,9 +16,9 @@ class TextGeneratorController extends Controller
      * Set shared variables and default values
      */
       static $textOutput;
-      static $wordsToGenerate = 250;
+      static $wordsToGenerate = 20;
       static $paragraphs= 3;
-      static $nValue = 10;
+      static $nValue = 350;
       static $source;
       static $textCorpus;
       static $nGrams =array();
@@ -61,49 +62,63 @@ class TextGeneratorController extends Controller
                 // preg_replace('/\s++/', ' ',$text); // remove redundant white space
             return trim(strip_tags( $text ));
         }
+      /**
+       * Select Source of content.
+       */
+      public function selectSource(){
+            $content = "hamlet";
+            switch ($content){
+              case "loremIpsum":
+                TextGeneratorController::$source = TextGeneratorData::$loremIpsum;
+                break;
+              case "repeatable":
+                TextGeneratorController::$source = TextGeneratorData::$repeatable;
+                break;
+              case "smallString":
+                TextGeneratorController::$source = TextGeneratorData::$smallString;
+                echo "Small text selected<br>";// Debug
+                break;
+              case "songs":
+                TextGeneratorController::$source = TextGeneratorData::$songs;
+                break;
+              case "cooking":
+                TextGeneratorController::$source = TextGeneratorData::$cooking;
+                break;
+              case "ladyGaga":
+                TextGeneratorController::$source = TextGeneratorData::$ladyGaga;
+                break;
+              case "url":
+                TextGeneratorController::$source = file_get_contents('http://dwa15.com/','<br>');
+                break;
+              case "hamlet":
+                TextGeneratorController::$source = hamletData::$hamlet;
+                break;
 
-
-
+            }
+      }
       /**
        * Load text corpus. Stript html tags. Remove reduntant white space . Transform into array
        * so we can easily manipulate it.  Copy n-1 words to end of array to
        * handle edge cases
        */
       public function loadTextCorpus(){
-        $content = "beatles";
-        switch ($content){
-          case "smallText":
-            TextGeneratorController::$source = TextGeneratorData::$smallText;
-            break;
-          case "beatles":
-            TextGeneratorController::$source = TextGeneratorData::$beatles;
-            break;
-          case "cooking":
-            TextGeneratorController::$source = TextGeneratorData::$cooking;
-            break;
-          case "harvardSongs":
-            TextGeneratorController::$source = TextGeneratorData::$harvardSongs;
-            break;
-          case "ladyGaga":
-            TextGeneratorController::$source = TextGeneratorData::$ladyGaga;
-            break;
-          case "url":
-            TextGeneratorController::$source = file_get_contents('http://dwa15.com/','<br>');
-            break;
-          case "hamlet":
-            TextGeneratorController::$source = readfile('hamlet.txt');
-            break;
-        }
-        // Sanitize text
+
+        // Prepare for manipulation. Sanitize text and transform to array
         TextGeneratorController::$textCorpus = TextGeneratorController::strip_html_tags(TextGeneratorController::$source);
+        TextGeneratorController::$textCorpus = explode(" ",TextGeneratorController::$textCorpus);
+
+        // Make sure that the initial corpus is at least N+1 words long
+        if(count(TextGeneratorController::$textCorpus) < TextGeneratorController::$nValue){
+          $wordsToCopy = TextGeneratorController::$nValue + 1 - count(TextGeneratorController::$textCorpus);
+          for($i = 0; $i < $wordsToCopy; $i++){
+            TextGeneratorController::$textCorpus[]=TextGeneratorController::$textCorpus[$i];
+          }
+        }
 
         // Copy n words to the end to handle 'wrap-around' edge case
-        TextGeneratorController::$textCorpus = explode(" ",TextGeneratorController::$textCorpus);
-        echo "Original word count: ". count(TextGeneratorController::$textCorpus)."<br>";
         for($i = 0; $i < TextGeneratorController::$nValue; $i++){
           TextGeneratorController::$textCorpus[]=TextGeneratorController::$textCorpus[$i];
         }
-        echo "Extended word count: ". count(TextGeneratorController::$textCorpus)."<br>";
       }
 
       /**
@@ -116,14 +131,21 @@ class TextGeneratorController extends Controller
        */
       public function buildNGrams(){
           $wordsInCorpus = count(TextGeneratorController::$textCorpus);
-        for ($i= 0; $i < $wordsInCorpus; $i++){
+          for ($i= 0; $i < $wordsInCorpus; $i++){
             $prefix = implode(" ",array_slice(TextGeneratorController::$textCorpus,$i,TextGeneratorController::$nValue));
             if (!array_key_exists($prefix,TextGeneratorController::$nGrams)){
                 $newSuffixEnd = array_slice(TextGeneratorController::$textCorpus,$i+TextGeneratorController::$nValue,1);
-                TextGeneratorController::$nGrams[$prefix] = $newSuffixEnd;
+                // If word exists, add to output
+                if (!($newSuffixEnd=="")){
+                  TextGeneratorController::$nGrams[$prefix] = $newSuffixEnd;
+              }
+
             } else{
                 $newSuffixEnd = implode(array_slice(TextGeneratorController::$textCorpus,$i+TextGeneratorController::$nValue,1));
+                // If word exists, add to output
+                if (!($newSuffixEnd=="")){
                 array_push(TextGeneratorController::$nGrams[$prefix],$newSuffixEnd);
+              }
             }
         }
       }
@@ -136,34 +158,42 @@ class TextGeneratorController extends Controller
        *    and adding the selected suffix
        */
       public function generateParagraph(){
-          //Start paragraph in a random place.  Make first letter uppercase
+          // Start paragraph in a random place.  Make first letter uppercase. Add prefix to output.
           $nextPrefix = array_rand(TextGeneratorController::$nGrams, 1);
-          TextGeneratorController::$textOutput = ucfirst($nextPrefix);
-          TextGeneratorController::$textOutput=explode(" ",TextGeneratorController::$textOutput);
+          if (!($nextPrefix == " " || $nextPrefix == "")){
+            TextGeneratorController::$textOutput = ucfirst($nextPrefix);
+            TextGeneratorController::$textOutput= explode(" ",TextGeneratorController::$textOutput);
+            $wordsGenerated = count(TextGeneratorController::$textOutput);// debug
+          }
 
           // Select suffix from list of available values, update prefix and repeat
-          for($i=0 ; $i < TextGeneratorController::$wordsToGenerate - TextGeneratorController::$nValue; $i++){
-            if (!array_key_exists($nextPrefix,TextGeneratorController::$nGrams)){
-              $potentialSuffixes = array();
-            } else{
-              $potentialSuffixes = TextGeneratorController::$nGrams[$nextPrefix];
-            }
+          $wordsGenerated = 0;
+            while($wordsGenerated <  TextGeneratorController::$wordsToGenerate){
+              if (!array_key_exists($nextPrefix,TextGeneratorController::$nGrams)){
+                $potentialSuffixes = array();
+              } else{
+                $potentialSuffixes = TextGeneratorController::$nGrams[$nextPrefix];
+              }
 
-            // Get next suffix. If none exist, try a new prefix
-            if(count($potentialSuffixes)>= 1){
-              $nextSuffixKey = array_rand($potentialSuffixes,1);
-              $nextSuffix = $potentialSuffixes[$nextSuffixKey];
-              array_push(TextGeneratorController::$textOutput,$nextSuffix);
-            } else {
-              $i--;
-              continue;
-            }
+              // Get next suffix. If none exist, try a new prefix
+              if(count($potentialSuffixes)>= 1){
+                $nextSuffixKey = array_rand($potentialSuffixes,1);
+                $nextSuffix = $potentialSuffixes[$nextSuffixKey];
+                // If word exists, add to output
+                if (!($nextSuffix=="")){
+                      array_push(TextGeneratorController::$textOutput,$nextSuffix);
+                      $wordsGenerated = count(TextGeneratorController::$textOutput);
+                    }
+              }else {
+                $wordsGenerated = count(TextGeneratorController::$textOutput);
+                continue;
+              }
 
-            // Update prefix and repeat.  We explode/implode because the map expects a string as key
-            $nextPrefix=explode(" ",$nextPrefix);
-            array_push($nextPrefix,$nextSuffix);
-            unset($nextPrefix[0]);
-            $nextPrefix=implode(" ",$nextPrefix);
+              // Update prefix and repeat.  We explode/implode because the map expects a string as key
+              $nextPrefix=explode(" ",$nextPrefix);
+              array_push($nextPrefix,$nextSuffix);
+              unset($nextPrefix[0]);
+              $nextPrefix=implode(" ",$nextPrefix);
           }
 
           // End paragraph with "..."
@@ -173,9 +203,9 @@ class TextGeneratorController extends Controller
       /**
        *  Output paragraph.  Turn array into string and echo
        */
-      public function printOutput(&$textOutput){
-        $textOutput = implode(" ",$textOutput);
-        echo "<p>".$textOutput."</p>";
+      public function printOutput(){
+        TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
+        echo "<p>".TextGeneratorController::$textOutput."</p>";
       }
 
       /**
@@ -185,18 +215,12 @@ class TextGeneratorController extends Controller
        */
       public function generateText()
       {
+          TextGeneratorController::selectSource();
           TextGeneratorController::loadTextCorpus();
           TextGeneratorController::buildNGrams();
-
           for ($i = 0 ; $i < TextGeneratorController::$paragraphs; $i++){
             TextGeneratorController::generateParagraph();
-            TextGeneratorController::printOutput(TextGeneratorController::$textOutput);
+            TextGeneratorController::printOutput();
         }
       }
-
-
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -6,7 +6,9 @@ namespace App\Helpers;
 
 class TextGeneratorData{
 
-  static $smallText = "this is small";
+  static $smallString = "this is small";
+
+  static $repeatable = "your wish is my command your wish is my desire your wish is my pleasure your wish is my command ";
 
   static $cooking = "
   Beat egg until fluffy.
@@ -35,383 +37,7 @@ class TextGeneratorData{
   Bake in preheated oven until no longer pink in the center and the juices run clear, 18 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).
   ";
 
-  static $musical= "
-  I heard that you're settled down.
-  That you found a girl and you're married now.
-  I heard that your dreams came true.
-  Guess she gave you things I didn't give to you.
 
-  Old friend, why are you so shy?
-  Ain't like you to hold back or hide from the light.
-
-  I hate to turn up out of the blue, uninvited.
-  But I couldn't stay away, I couldn't fight it.
-  I had hoped you'd see my face and that you'd be reminded.
-  That for me, it isn't over.
-
-  Never mind, I'll find someone like you.
-  I wish nothing but the best for you, too.
-  Don't forget me, I beg, I remember you said.
-  Sometimes it lasts in love, but sometimes it hurts instead.
-  Sometimes it lasts in love, but sometimes it hurts instead.
-
-  You know how the time flies
-  Only yesterday was the time of our lives
-  We were born and raised in a summer haze
-  Bound by the surprise of our glory days
-
-  I hate to turn up out of the blue, uninvited
-  But I couldn't stay away, I couldn't fight it
-  I had hoped you'd see my face and that you'd be reminded
-  That for me, it isn't over
-
-  Never mind, I'll find someone like you
-  I wish nothing but the best for you, too
-  Don't forget me, I beg, I remember you said
-  Sometimes it lasts in love, but sometimes it hurts instead, yeah
-
-  Nothing compares, no worries or cares
-  Regrets and mistakes, they're memories made
-  Who would have known how bittersweet this would taste?
-
-  Never mind, I'll find someone like you
-  I wish nothing but the best for you
-  Don't forget me, I beg, I remember you said
-  Sometimes it lasts in love, but sometimes it hurts instead
-
-  Never mind, I'll find someone like you
-  I wish nothing but the best for you, too
-  Don't forget me, I beg, I remember you said
-  Sometimes it lasts in love, but sometimes it hurts instead
-  Sometimes it lasts in love, but sometimes it hurts instead
-
-  There's a fire starting in my heart
-  Reaching a fever pitch, it's bringing me out the dark
-  Finally I can see you crystal clear
-  [Clean version:] Go 'head and sell me out and I'll lay your ship bare
-  [Explicit version:] Go 'head and sell me out and I'll lay your shit bare
-  See how I leave with every piece of you
-  Don't underestimate the things that I will do
-
-  There's a fire starting in my heart
-  Reaching a fever pitch
-  And it's bringing me out the dark
-
-  The scars of your love remind me of us
-  They keep me thinking that we almost had it all
-  The scars of your love, they leave me breathless
-  I can't help feeling
-  We could have had it all
-  (You're gonna wish you never had met me)
-  Rolling in the deep
-  (Tears are gonna fall, rolling in the deep)
-  You had my heart inside of your hand
-  (You're gonna wish you never had met me)
-  And you played it, to the beat
-  (Tears are gonna fall, rolling in the deep)
-
-  Baby, I have no story to be told
-  But I've heard one on you
-  And I'm gonna make your head burn
-  Think of me in the depths of your despair
-  Make a home down there
-  As mine sure won't be shared
-
-  (You're gonna wish you never had met me)
-  The scars of your love remind me of us
-  (Tears are gonna fall, rolling in the deep)
-  They keep me thinking that we almost had it all
-  (You're gonna wish you never had met me)
-  The scars of your love, they leave me breathless
-  (Tears are gonna fall, rolling in the deep)
-  I can't help feeling
-  We could have had it all
-  (You're gonna wish you never had met me)
-  Rolling in the deep
-  (Tears are gonna fall, rolling in the deep)
-  You had my heart inside of your hand
-  (You're gonna wish you never had met me)
-  And you played it, to the beat
-  (Tears are gonna fall, rolling in the deep)
-  We could have had it all
-  Rolling in the deep
-  You had my heart inside of your hand
-  But you played it, with a beating
-
-  Throw your soul through every open door (woah)
-  Count your blessings to find what you look for (woah)
-  Turn my sorrow into treasured gold (woah)
-  You'll pay me back in kind and reap just what you sow (woah)
-  (You're gonna wish you never had met me)
-  We could have had it all
-  (Tears are gonna fall, rolling in the deep)
-  We could have had it all
-  (You're gonna wish you never had met me)
-  It all, it all, it all
-  (Tears are gonna fall, rolling in the deep)
-
-  We could have had it all
-  (You're gonna wish you never had met me)
-  Rolling in the deep
-  (Tears are gonna fall, rolling in the deep)
-  You had my heart inside of your hand
-  (You're gonna wish you never had met me)
-  And you played it to the beat
-  (Tears are gonna fall, rolling in the deep)
-
-  We could have had it all
-  (You're gonna wish you never had met me)
-  Rolling in the deep
-  (Tears are gonna fall, rolling in the deep)
-  You had my heart inside of your hand
-  (You're gonna wish you never had met me)
-
-  But you played it
-  You played it
-  You played it
-  You played it to the beat.
-
-
-  I let it fall, my heart,
-  And as it fell you rose to claim it
-  It was dark and I was over
-  Until you kissed my lips and you saved me
-
-  My hands, they're strong
-  But my knees were far too weak
-  To stand in your arms
-  Without falling to your feet
-
-  But there's a side to you that I never knew, never knew
-  All the things you'd say, they were never true, never true
-  And the games you'd play, you would always win, always win
-
-  But I set fire to the rain
-  Watched it pour as I touched your face
-  Let it burn while I cry
-  'Cause I heard it screaming out your name, your name
-
-  When laying with you
-  I could stay there, close my eyes
-  Feel you here, forever
-  You and me together, nothing gets better
-
-  Cause there's a side to you that I never knew, never knew
-  All the things you'd say, they were never true, never true
-  And the games you'd play, you would always win, always win
-
-  But I set fire to the rain
-  Watched it pour as I touched your face
-  Let it burn while I cried
-  'Cause I heard it screaming out your name, your name
-
-  I set fire to the rain
-  And I threw us into the flames
-  Where I felt something die, 'cause I knew that
-  That was the last time, the last time
-
-  Sometimes I wake up by the door
-  As if that heart you caught is still waiting for you
-  Even now when it's already over
-  I can't help myself from looking for you
-
-  I set fire to the rain
-  Watched it pour as I touched your face
-  Let it burn while I cried
-  'Cause I heard it screaming out your name, your name
-
-  I set fire to the rain
-  And I threw us into the flames
-  Where I felt something die
-  'Cause I knew that that was the last time, the last time, oh
-  Oh, oh
-
-  Let it burn, oh
-  Let it burn
-  Let it burn
-
-  I can't get no satisfaction
-  I can't get no satisfaction
-  'Cause I try and I try and I try and I try
-  I can't get no, I can't get no
-  When I'm drivin' in my car
-  And that man comes on the radio
-  And he's tellin' me more and more
-  About some useless information
-  Supposed to fire my imagination
-  I can't get no, oh no no no
-  Hey hey hey, that's what I say
-  I can't get no satisfaction
-  I can't get no satisfaction
-  'Cause I try and I try and I try and I try
-  I can't get no, I can't get no
-  When I'm watchin' my TV
-  And that man comes on to tell me
-  How white my shirts can be
-  But he can't be a man 'cause he doesn't smoke
-  The same cigarrettes as me
-  I can't get no, oh no no no
-  Hey hey hey, that's what I say
-  I can't get no satisfaction
-  I can't get no girl reaction
-  Cause I try and I try and I try and I try
-  I can't get no, I can't get no
-  When I'm ridin' round the world
-  And I'm doin' this and I'm signing that
-  And I'm tryin' to make some girl
-  Who tells me baby better come back later next week
-  Cause you see I'm on losing streak
-  I can't get no, oh no no no
-  Hey hey hey, that's what I say
-  I can't get no, I can't get no
-  I can't get no satisfaction
-  No satisfaction, no satisfaction, no satisfaction
-
-  It is the evening of the day
-  I sit and watch the children play
-  Smiling faces I can see
-  But not for me
-  I sit and watch
-  As tears go by
-  My riches can't buy everything
-  I want to hear the children sing
-  All I hear is the sound
-  Of rain falling on the ground
-  I sit and watch
-  As tears go by
-  It is the evening of the day
-  I sit and watch the children play
-  Doin' things I used to do
-  They think are new
-  I sit and watch
-  As tears go by
-
-  Bored on Friday night
-  Spinning 'round just like I'm hypnotised, oh oh
-  Need some neon lights
-  Wanna feel like I'm electrified, so help me out
-
-  Get your boyfriend's car
-  Come and pick me up, oh
-  Let's take it for a ride
-  What trouble can we find?
-
-  One night, and we're gonna come and crash the party
-  Weren't invited but we're feeling so outrageous
-  Just like we're famous
-  Got one night, and we're gonna come and get it started
-  Now we're falling down the stairs
-  We act so shameless
-  Come on let's lose control!
-
-  One night, and we're gonna come and crash the party
-  Weren't invited but we're feeling so outrageous
-  Just like we're famous
-  Got one night, and we're gonna come and get it started
-  Now we're falling down the stairs
-  We act so shameless
-  Just like we're famous
-
-  Ah ah ah oh oh
-  Oh ah ah ah oh oh oh
-  Ah ah ah oh oh
-  Just like we're famous
-
-  Blown up like balloons
-  Purple glitter flying through the air, oh oh
-  Sweat drips from the roof
-  And you know we're Lucy in the sky of diamonds
-
-  Music playing loud
-  Tripping through the crowd, oh
-  Put your sunglasses on
-  Don't care if we look dumb
-
-  One night, and we're gonna come and crash the party
-  Weren't invited but we're feeling so outrageous
-  Just like we're famous
-  Got one night, and we're gonna come and get it started
-  Now we're falling down the stairs
-  We act so shameless
-  Come on let's lose control!
-
-  One night, and we're gonna come and crash the party
-  Weren't invited but we're feeling so outrageous
-  Just like we're famous
-  Got one night, and we're gonna come and get it started
-  Now we're falling down the stairs
-  We act so shameless
-  Come on let's lose control!
-
-  Ah ah ah oh oh
-  Oh ah ah ah oh oh oh
-  Ah ah ah oh oh
-  Just like we're famous
-
-  Ah ah ah oh oh
-  Oh ah ah ah oh oh oh
-  Ah ah ah oh oh
-  Just like we're famous
-
-  One night, and we're gonna come and crash the party
-  Weren't invited but we're feeling so outrageous
-  Just like we're famous
-  Got one night, and we're gonna come and get it started
-  Now we're falling down the stairs
-  We act so shameless
-  Come on let's lose control!
-
-  Ah ah ah oh oh
-  Oh ah ah ah oh oh oh
-  Ah ah ah oh oh
-  Just like we're famous
-
-  Ah ah ah oh oh
-  Oh ah ah ah oh oh oh
-  Ah ah ah oh oh
-  Just like we're famous
-  ";
-
-
-  static $harvardSongs = "
-  With Crimson in triumph flashing
-'Mid the strains of victory,
-Poor Eli's hopes we are dashing
-Into blue obscurity.
-Resistless our team sweeps goalward
-With the fury of the blast;
-We'll fight for the name of Harvard
-'Til the last white line is passed.
-Harvard! Harvard! Harvard!
-
-Fight fiercely, Harvard!
-Fight, fight, fight!
-Demonstrate to them our skill.
-Albeit they possess the might,
-
-Nonetheless we have the will
-
-Ten thousand men of Harvard
-Want vict'ry today,
-For they know that o'er old Eli
-Fair Harvard holds sway.
-So then we'll conquer old Eli's men,
-And when the game ends, we'll sing again:
-Ten thousand men of Harvard
-gained vict'ry today!
-
-Illegitimum Non Carborundum;
-Domine salvum fac.
-Illegitimum Non Carborundum;
-Domine salvum fac.
-Gaudeamus igitur!
-Veritas non sequitur?
-Illegitimum non Carborundum -- ipso facto!
-
-";
-
-
-  static $repeatable = "your wish is my command your wish is my desire your wish is my pleasure your wish is my command ";
 
   static $loremIpsum = "
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -439,7 +65,379 @@ Illegitimum non Carborundum -- ipso facto!
     voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
     ";
 
-  static $beatles = "
+    static $songs= "
+    With Crimson in triumph flashing
+    'Mid the strains of victory,
+    Poor Eli's hopes we are dashing
+    Into blue obscurity.
+    Resistless our team sweeps goalward
+    With the fury of the blast;
+    We'll fight for the name of Harvard
+    'Til the last white line is passed.
+    Harvard! Harvard! Harvard!
+
+    Fight fiercely, Harvard!
+    Fight, fight, fight!
+    Demonstrate to them our skill.
+    Albeit they possess the might,
+
+    Nonetheless we have the will
+
+    Ten thousand men of Harvard
+    Want vict'ry today,
+    For they know that o'er old Eli
+    Fair Harvard holds sway.
+    So then we'll conquer old Eli's men,
+    And when the game ends, we'll sing again:
+    Ten thousand men of Harvard
+    gained vict'ry today!
+
+    Illegitimum Non Carborundum;
+    Domine salvum fac.
+    Illegitimum Non Carborundum;
+    Domine salvum fac.
+    Gaudeamus igitur!
+    Veritas non sequitur?
+    Illegitimum non Carborundum -- ipso facto!
+
+
+
+
+    I heard that you're settled down.
+    That you found a girl and you're married now.
+    I heard that your dreams came true.
+    Guess she gave you things I didn't give to you.
+
+    Old friend, why are you so shy?
+    Ain't like you to hold back or hide from the light.
+
+    I hate to turn up out of the blue, uninvited.
+    But I couldn't stay away, I couldn't fight it.
+    I had hoped you'd see my face and that you'd be reminded.
+    That for me, it isn't over.
+
+    Never mind, I'll find someone like you.
+    I wish nothing but the best for you, too.
+    Don't forget me, I beg, I remember you said.
+    Sometimes it lasts in love, but sometimes it hurts instead.
+    Sometimes it lasts in love, but sometimes it hurts instead.
+
+    You know how the time flies
+    Only yesterday was the time of our lives
+    We were born and raised in a summer haze
+    Bound by the surprise of our glory days
+
+    I hate to turn up out of the blue, uninvited
+    But I couldn't stay away, I couldn't fight it
+    I had hoped you'd see my face and that you'd be reminded
+    That for me, it isn't over
+
+    Never mind, I'll find someone like you
+    I wish nothing but the best for you, too
+    Don't forget me, I beg, I remember you said
+    Sometimes it lasts in love, but sometimes it hurts instead, yeah
+
+    Nothing compares, no worries or cares
+    Regrets and mistakes, they're memories made
+    Who would have known how bittersweet this would taste?
+
+    Never mind, I'll find someone like you
+    I wish nothing but the best for you
+    Don't forget me, I beg, I remember you said
+    Sometimes it lasts in love, but sometimes it hurts instead
+
+    Never mind, I'll find someone like you
+    I wish nothing but the best for you, too
+    Don't forget me, I beg, I remember you said
+    Sometimes it lasts in love, but sometimes it hurts instead
+    Sometimes it lasts in love, but sometimes it hurts instead
+
+    There's a fire starting in my heart
+    Reaching a fever pitch, it's bringing me out the dark
+    Finally I can see you crystal clear
+    [Clean version:] Go 'head and sell me out and I'll lay your ship bare
+    [Explicit version:] Go 'head and sell me out and I'll lay your shit bare
+    See how I leave with every piece of you
+    Don't underestimate the things that I will do
+
+    There's a fire starting in my heart
+    Reaching a fever pitch
+    And it's bringing me out the dark
+
+    The scars of your love remind me of us
+    They keep me thinking that we almost had it all
+    The scars of your love, they leave me breathless
+    I can't help feeling
+    We could have had it all
+    (You're gonna wish you never had met me)
+    Rolling in the deep
+    (Tears are gonna fall, rolling in the deep)
+    You had my heart inside of your hand
+    (You're gonna wish you never had met me)
+    And you played it, to the beat
+    (Tears are gonna fall, rolling in the deep)
+
+    Baby, I have no story to be told
+    But I've heard one on you
+    And I'm gonna make your head burn
+    Think of me in the depths of your despair
+    Make a home down there
+    As mine sure won't be shared
+
+    (You're gonna wish you never had met me)
+    The scars of your love remind me of us
+    (Tears are gonna fall, rolling in the deep)
+    They keep me thinking that we almost had it all
+    (You're gonna wish you never had met me)
+    The scars of your love, they leave me breathless
+    (Tears are gonna fall, rolling in the deep)
+    I can't help feeling
+    We could have had it all
+    (You're gonna wish you never had met me)
+    Rolling in the deep
+    (Tears are gonna fall, rolling in the deep)
+    You had my heart inside of your hand
+    (You're gonna wish you never had met me)
+    And you played it, to the beat
+    (Tears are gonna fall, rolling in the deep)
+    We could have had it all
+    Rolling in the deep
+    You had my heart inside of your hand
+    But you played it, with a beating
+
+    Throw your soul through every open door (woah)
+    Count your blessings to find what you look for (woah)
+    Turn my sorrow into treasured gold (woah)
+    You'll pay me back in kind and reap just what you sow (woah)
+    (You're gonna wish you never had met me)
+    We could have had it all
+    (Tears are gonna fall, rolling in the deep)
+    We could have had it all
+    (You're gonna wish you never had met me)
+    It all, it all, it all
+    (Tears are gonna fall, rolling in the deep)
+
+    We could have had it all
+    (You're gonna wish you never had met me)
+    Rolling in the deep
+    (Tears are gonna fall, rolling in the deep)
+    You had my heart inside of your hand
+    (You're gonna wish you never had met me)
+    And you played it to the beat
+    (Tears are gonna fall, rolling in the deep)
+
+    We could have had it all
+    (You're gonna wish you never had met me)
+    Rolling in the deep
+    (Tears are gonna fall, rolling in the deep)
+    You had my heart inside of your hand
+    (You're gonna wish you never had met me)
+
+    But you played it
+    You played it
+    You played it
+    You played it to the beat.
+
+
+    I let it fall, my heart,
+    And as it fell you rose to claim it
+    It was dark and I was over
+    Until you kissed my lips and you saved me
+
+    My hands, they're strong
+    But my knees were far too weak
+    To stand in your arms
+    Without falling to your feet
+
+    But there's a side to you that I never knew, never knew
+    All the things you'd say, they were never true, never true
+    And the games you'd play, you would always win, always win
+
+    But I set fire to the rain
+    Watched it pour as I touched your face
+    Let it burn while I cry
+    'Cause I heard it screaming out your name, your name
+
+    When laying with you
+    I could stay there, close my eyes
+    Feel you here, forever
+    You and me together, nothing gets better
+
+    Cause there's a side to you that I never knew, never knew
+    All the things you'd say, they were never true, never true
+    And the games you'd play, you would always win, always win
+
+    But I set fire to the rain
+    Watched it pour as I touched your face
+    Let it burn while I cried
+    'Cause I heard it screaming out your name, your name
+
+    I set fire to the rain
+    And I threw us into the flames
+    Where I felt something die, 'cause I knew that
+    That was the last time, the last time
+
+    Sometimes I wake up by the door
+    As if that heart you caught is still waiting for you
+    Even now when it's already over
+    I can't help myself from looking for you
+
+    I set fire to the rain
+    Watched it pour as I touched your face
+    Let it burn while I cried
+    'Cause I heard it screaming out your name, your name
+
+    I set fire to the rain
+    And I threw us into the flames
+    Where I felt something die
+    'Cause I knew that that was the last time, the last time, oh
+    Oh, oh
+
+    Let it burn, oh
+    Let it burn
+    Let it burn
+
+    I can't get no satisfaction
+    I can't get no satisfaction
+    'Cause I try and I try and I try and I try
+    I can't get no, I can't get no
+    When I'm drivin' in my car
+    And that man comes on the radio
+    And he's tellin' me more and more
+    About some useless information
+    Supposed to fire my imagination
+    I can't get no, oh no no no
+    Hey hey hey, that's what I say
+    I can't get no satisfaction
+    I can't get no satisfaction
+    'Cause I try and I try and I try and I try
+    I can't get no, I can't get no
+    When I'm watchin' my TV
+    And that man comes on to tell me
+    How white my shirts can be
+    But he can't be a man 'cause he doesn't smoke
+    The same cigarrettes as me
+    I can't get no, oh no no no
+    Hey hey hey, that's what I say
+    I can't get no satisfaction
+    I can't get no girl reaction
+    Cause I try and I try and I try and I try
+    I can't get no, I can't get no
+    When I'm ridin' round the world
+    And I'm doin' this and I'm signing that
+    And I'm tryin' to make some girl
+    Who tells me baby better come back later next week
+    Cause you see I'm on losing streak
+    I can't get no, oh no no no
+    Hey hey hey, that's what I say
+    I can't get no, I can't get no
+    I can't get no satisfaction
+    No satisfaction, no satisfaction, no satisfaction
+
+    It is the evening of the day
+    I sit and watch the children play
+    Smiling faces I can see
+    But not for me
+    I sit and watch
+    As tears go by
+    My riches can't buy everything
+    I want to hear the children sing
+    All I hear is the sound
+    Of rain falling on the ground
+    I sit and watch
+    As tears go by
+    It is the evening of the day
+    I sit and watch the children play
+    Doin' things I used to do
+    They think are new
+    I sit and watch
+    As tears go by
+
+    Bored on Friday night
+    Spinning 'round just like I'm hypnotised, oh oh
+    Need some neon lights
+    Wanna feel like I'm electrified, so help me out
+
+    Get your boyfriend's car
+    Come and pick me up, oh
+    Let's take it for a ride
+    What trouble can we find?
+
+    One night, and we're gonna come and crash the party
+    Weren't invited but we're feeling so outrageous
+    Just like we're famous
+    Got one night, and we're gonna come and get it started
+    Now we're falling down the stairs
+    We act so shameless
+    Come on let's lose control!
+
+    One night, and we're gonna come and crash the party
+    Weren't invited but we're feeling so outrageous
+    Just like we're famous
+    Got one night, and we're gonna come and get it started
+    Now we're falling down the stairs
+    We act so shameless
+    Just like we're famous
+
+    Ah ah ah oh oh
+    Oh ah ah ah oh oh oh
+    Ah ah ah oh oh
+    Just like we're famous
+
+    Blown up like balloons
+    Purple glitter flying through the air, oh oh
+    Sweat drips from the roof
+    And you know we're Lucy in the sky of diamonds
+
+    Music playing loud
+    Tripping through the crowd, oh
+    Put your sunglasses on
+    Don't care if we look dumb
+
+    One night, and we're gonna come and crash the party
+    Weren't invited but we're feeling so outrageous
+    Just like we're famous
+    Got one night, and we're gonna come and get it started
+    Now we're falling down the stairs
+    We act so shameless
+    Come on let's lose control!
+
+    One night, and we're gonna come and crash the party
+    Weren't invited but we're feeling so outrageous
+    Just like we're famous
+    Got one night, and we're gonna come and get it started
+    Now we're falling down the stairs
+    We act so shameless
+    Come on let's lose control!
+
+    Ah ah ah oh oh
+    Oh ah ah ah oh oh oh
+    Ah ah ah oh oh
+    Just like we're famous
+
+    Ah ah ah oh oh
+    Oh ah ah ah oh oh oh
+    Ah ah ah oh oh
+    Just like we're famous
+
+    One night, and we're gonna come and crash the party
+    Weren't invited but we're feeling so outrageous
+    Just like we're famous
+    Got one night, and we're gonna come and get it started
+    Now we're falling down the stairs
+    We act so shameless
+    Come on let's lose control!
+
+    Ah ah ah oh oh
+    Oh ah ah ah oh oh oh
+    Ah ah ah oh oh
+    Just like we're famous
+
+    Ah ah ah oh oh
+    Oh ah ah ah oh oh oh
+    Ah ah ah oh oh
+    Just like we're famous
+
     Yesterday, all my troubles seemed so far away
     Now it looks as though they're here to stay
     oh, I believe in yesterday
