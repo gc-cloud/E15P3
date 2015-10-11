@@ -33,6 +33,7 @@ Documentation for the framework can be found on the [Laravel website](http://lar
 ### Acknowledgements
 - Theme based on bootstrap's carrousel template.
 - This app was built using the Laravel framework. The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- Musical Text from Adele, Idina Menzel, Beatles
 
 - LoremIpsum text from http://lipsum.com
 - Images:
