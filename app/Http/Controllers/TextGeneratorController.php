@@ -65,34 +65,56 @@ class TextGeneratorController extends Controller
         }
       }
 
+      /* Generate one paragraph of random text. Start by picking a random prefix to initialize.
+       * For the remaining iterations repeat the following:
+       *  - Pick a random suffix from the valid list for that prefix
+       *  - Build the next prefix by removing the first word from the original prefix
+       *    and adding the selected suffix
+       */
       public function generateParagraph(){
+        $nextPrefix = array_rand(TextGeneratorController::$nGrams, 1);
+        TextGeneratorController::$textOutput = $nextPrefix;
 
+        for($i=0 ; $i < TextGeneratorController::$wordsToGenerate - TextGeneratorController::$nValue; $i++){
+          $potentialSuffixes = TextGeneratorController::$nGrams[$nextPrefix];
+          $nextSuffixKey = array_rand($potentialSuffixes,1);
+          $nextSuffix = $potentialSuffixes[$nextSuffixKey];
+          $nextPrefix=explode(" ",$nextPrefix);
+          array_push($nextPrefix,$nextSuffix);
+          TextGeneratorController::$textOutput=explode(" ",TextGeneratorController::$textOutput);
+          array_push(TextGeneratorController::$textOutput,$nextSuffix);
+          TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
+          unset($nextPrefix[0]);
+         $nextPrefix=implode(" ",$nextPrefix);
+        }
       }
+
       public function generateText()
       {
           TextGeneratorController::loadTextCorpus();
 
           TextGeneratorController::buildNGrams();
+          TextGeneratorController::generateParagraph();
           /* Generate random text. Start by picking a random prefix to initialize.  For
            * the remaining iterations repeat the following:
            *  - Pick a random suffix from the valid list for that prefix
            *  - Build the next prefix by removing the first word from the original prefix
            *    and adding the selected suffix
            */
-           $nextPrefix = array_rand(TextGeneratorController::$nGrams, 1);
-           TextGeneratorController::$textOutput = $nextPrefix;
-           for($i=0 ; $i < TextGeneratorController::$wordsToGenerate - TextGeneratorController::$nValue; $i++){
-             $potentialSuffixes = TextGeneratorController::$nGrams[$nextPrefix];
-             $nextSuffixKey = array_rand($potentialSuffixes,1);
-             $nextSuffix = $potentialSuffixes[$nextSuffixKey];
-             $nextPrefix=explode(" ",$nextPrefix);
-             array_push($nextPrefix,$nextSuffix);
-             TextGeneratorController::$textOutput=explode(" ",TextGeneratorController::$textOutput);
-             array_push(TextGeneratorController::$textOutput,$nextSuffix);
-             TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
-             unset($nextPrefix[0]);
-            $nextPrefix=implode(" ",$nextPrefix);
-           }
+          //  $nextPrefix = array_rand(TextGeneratorController::$nGrams, 1);
+          //  TextGeneratorController::$textOutput = $nextPrefix;
+          //  for($i=0 ; $i < TextGeneratorController::$wordsToGenerate - TextGeneratorController::$nValue; $i++){
+          //    $potentialSuffixes = TextGeneratorController::$nGrams[$nextPrefix];
+          //    $nextSuffixKey = array_rand($potentialSuffixes,1);
+          //    $nextSuffix = $potentialSuffixes[$nextSuffixKey];
+          //    $nextPrefix=explode(" ",$nextPrefix);
+          //    array_push($nextPrefix,$nextSuffix);
+          //    TextGeneratorController::$textOutput=explode(" ",TextGeneratorController::$textOutput);
+          //    array_push(TextGeneratorController::$textOutput,$nextSuffix);
+          //    TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
+          //    unset($nextPrefix[0]);
+          //   $nextPrefix=implode(" ",$nextPrefix);
+          //  }
 
            /* Output resultl to screen */
             TextGeneratorController::printOutput();
