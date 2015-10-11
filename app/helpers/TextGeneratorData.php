@@ -13,6 +13,8 @@ namespace App\Helpers;
 
 class TextGeneratorData{
 
+  static $repeatable = "your wish is my command your wish is my desire your wish is my pleasure your wish is my command ";
+
   static $loremIpsum = "
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
