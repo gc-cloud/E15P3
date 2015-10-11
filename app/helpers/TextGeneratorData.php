@@ -6,38 +6,32 @@ namespace App\Helpers;
 
 class TextGeneratorData{
 
-static $cooking = "
+  static $cooking = "
+  Beat egg until fluffy.
+  Add milk and melted margarine.
+  Add dry ingredients and mix well.
+  Heat a heavy griddle or fry pan which is greased with a little butter on a paper towel.
+  The pan is hot enough when a drop of water breaks into several smaller balls which 'dance' around the pan.
+  Pour a small amount of batter (approx 1/4 cup) into pan and tip to spread out or spread with spoon.
+  When bubbles appear on surface and begin to break, turn over and cook the other side.
 
-Beat egg until fluffy.
-Add milk and melted margarine.
-Add dry ingredients and mix well.
-Heat a heavy griddle or fry pan which is greased with a little butter on a paper towel.
-The pan is hot enough when a drop of water breaks into several smaller balls which 'dance' around the pan.
-Pour a small amount of batter (approx 1/4 cup) into pan and tip to spread out or spread with spoon.
-When bubbles appear on surface and begin to break, turn over and cook the other side.
+  Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven. In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside.
+  In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine).
+  Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel.
+  For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet).
+  Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You'll have 12 to 15 pancakes.) Serve warm, with desired toppings.
 
-Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven. In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside.
-In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine).
-Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel.
-For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet).
-Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You'll have 12 to 15 pancakes.) Serve warm, with desired toppings.
+  In a medium bowl, stir together the barbeque sauce, whiskey, Worcestershire sauce, ginger, cayenne pepper, paprika, chili powder, garlic powder, onion salt, oregano, red pepper flakes, sugar, ground black pepper, and hot pepper sauce. Cover, and keep refrigerated until ready to use.
 
+  Melt the butter in a large saucepan over medium heat. Add the onion juice, garlic juice, hot sauce, Worcestershire sauce, black pepper, cayenne pepper and beer. Mix until well blended.
+  Use a marinade injecting syringe or turkey baster with an injector tip to inject the marinade all over the turkey including the legs, back, wings, thighs and breasts. Place in a large plastic bag and marinate overnight in the refrigerator. Do not use a kitchen trash bag. If your turkey is large, you can use an oven bag.
+  When it's time to fry, measure the amount of oil needed by lowering the turkey into the fryer and filling with enough oil to cover it. Remove the turkey and set aside.
+  Heat the oil to 365 degrees F (185 degrees C). When the oil has come to temperature, lower the turkey into the hot oil slowly using the hanging device that comes with turkey deep-fryers. The turkey should be completely submerged in the oil. Cook for 36 minutes, or 3 minutes per pound of turkey. The turkey is done when the temperature in the thickest part of the thigh reaches 180 degrees F (80 degrees C). Turn off the flame and slowly remove from the oil, making sure all of the oil drains out of the cavity. Allow to rest on a serving platter for about 20 minutes before carving.
 
-In a medium bowl, stir together the barbeque sauce, whiskey, Worcestershire sauce, ginger, cayenne pepper, paprika, chili powder, garlic powder, onion salt, oregano, red pepper flakes, sugar, ground black pepper, and hot pepper sauce. Cover, and keep refrigerated until ready to use.
-
-
-Melt the butter in a large saucepan over medium heat. Add the onion juice, garlic juice, hot sauce, Worcestershire sauce, black pepper, cayenne pepper and beer. Mix until well blended.
-Use a marinade injecting syringe or turkey baster with an injector tip to inject the marinade all over the turkey including the legs, back, wings, thighs and breasts. Place in a large plastic bag and marinate overnight in the refrigerator. Do not use a kitchen trash bag. If your turkey is large, you can use an oven bag.
-When it's time to fry, measure the amount of oil needed by lowering the turkey into the fryer and filling with enough oil to cover it. Remove the turkey and set aside.
-Heat the oil to 365 degrees F (185 degrees C). When the oil has come to temperature, lower the turkey into the hot oil slowly using the hanging device that comes with turkey deep-fryers. The turkey should be completely submerged in the oil. Cook for 36 minutes, or 3 minutes per pound of turkey. The turkey is done when the temperature in the thickest part of the thigh reaches 180 degrees F (80 degrees C). Turn off the flame and slowly remove from the oil, making sure all of the oil drains out of the cavity. Allow to rest on a serving platter for about 20 minutes before carving.
-
-Preheat oven to 350 degrees F (175 degrees C).
-Mix sausage, ground turkey, eggs, Cheddar cheese, onion, and black pepper in a large bowl; roll into 1 1/2-inch balls. Arrange meatballs onto baking sheets.
-Bake in preheated oven until no longer pink in the center and the juices run clear, 18 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).
-
-
-
-";
+  Preheat oven to 350 degrees F (175 degrees C).
+  Mix sausage, ground turkey, eggs, Cheddar cheese, onion, and black pepper in a large bowl; roll into 1 1/2-inch balls. Arrange meatballs onto baking sheets.
+  Bake in preheated oven until no longer pink in the center and the juices run clear, 18 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).
+  ";
 
   static $musical= "
   I heard that you're settled down
