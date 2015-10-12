@@ -15,11 +15,11 @@ class TextGeneratorController extends Controller
     /**
      * Set shared variables and default values
      */
-      static $textOutput;
-      static $allParagraphs;
-      static $wordsToGenerate = 200;
       static $paragraphs= 3;
       static $nValue = 4;
+      static $textOutput;
+      static $allParagraphs;
+      static $wordsToGenerate;
       static $source;
       static $textCorpus;
       static $nGrams =array();
@@ -76,17 +76,9 @@ class TextGeneratorController extends Controller
        * Select Source of content.
        */
       public function selectSource(){
-            //$content = "songs";
             switch (TextGeneratorController::$content){
               case 'loremIpsum':
                 TextGeneratorController::$source = TextGeneratorData::$loremIpsum;
-                break;
-              case "repeatable":
-                TextGeneratorController::$source = TextGeneratorData::$repeatable;
-                break;
-              case "smallString":
-                TextGeneratorController::$source = TextGeneratorData::$smallString;
-                echo "Small text selected<br>";// Debug
                 break;
               case "songs":
                 TextGeneratorController::$source = TextGeneratorData::$songs;
@@ -94,10 +86,7 @@ class TextGeneratorController extends Controller
               case "cooking":
                 TextGeneratorController::$source = TextGeneratorData::$cooking;
                 break;
-              case "ladyGaga":
-                TextGeneratorController::$source = TextGeneratorData::$ladyGaga;
-                break;
-              case "url":
+              case "dwa15":
                 TextGeneratorController::$source = file_get_contents('http://dwa15.com/','<br>');
                 break;
               case "hamlet":
@@ -230,7 +219,7 @@ class TextGeneratorController extends Controller
 
       {
 
-          TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',200);
+          TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',100);
           TextGeneratorController::$paragraphs=$request->input('paragraphs',3);
           TextGeneratorController::$content=$request->input('content','loremIpsum');
           $request->flash(); // Send original values back to form
