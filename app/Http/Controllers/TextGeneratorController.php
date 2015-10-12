@@ -16,9 +16,10 @@ class TextGeneratorController extends Controller
      * Set shared variables and default values
      */
       static $textOutput;
-      static $wordsToGenerate = 20;
+      static $allParagraphs;
+      static $wordsToGenerate = 200;
       static $paragraphs= 3;
-      static $nValue = 350;
+      static $nValue = 4;
       static $source;
       static $textCorpus;
       static $nGrams =array();
@@ -66,7 +67,7 @@ class TextGeneratorController extends Controller
        * Select Source of content.
        */
       public function selectSource(){
-            $content = "hamlet";
+            $content = "songs";
             switch ($content){
               case "loremIpsum":
                 TextGeneratorController::$source = TextGeneratorData::$loremIpsum;
@@ -205,7 +206,8 @@ class TextGeneratorController extends Controller
        */
       public function printOutput(){
         TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
-        echo "<p>".TextGeneratorController::$textOutput."</p>";
+        //echo "<p>".TextGeneratorController::$textOutput."</p>";
+        TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<p>".TextGeneratorController::$textOutput."</p>";
       }
 
       /**
@@ -222,5 +224,10 @@ class TextGeneratorController extends Controller
             TextGeneratorController::generateParagraph();
             TextGeneratorController::printOutput();
         }
+
+        //$request->flash(); // Send original values back to form
+        $showThis = TextGeneratorController::$allParagraphs;
+        return view('textGenerator',compact('allParagraphs','showThis'));
+
       }
 }
