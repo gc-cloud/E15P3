@@ -23,6 +23,15 @@ class TextGeneratorController extends Controller
       static $source;
       static $textCorpus;
       static $nGrams =array();
+      static $content;
+
+    /*  function loadThing(TextGeneratorRequest $request){
+          TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',300);
+      }
+*/
+
+
+
 
       /**
        * Remove HTML tags, including invisible text such as style and
@@ -67,9 +76,9 @@ class TextGeneratorController extends Controller
        * Select Source of content.
        */
       public function selectSource(){
-            $content = "songs";
-            switch ($content){
-              case "loremIpsum":
+            //$content = "songs";
+            switch (TextGeneratorController::$content){
+              case 'loremIpsum':
                 TextGeneratorController::$source = TextGeneratorData::$loremIpsum;
                 break;
               case "repeatable":
@@ -168,6 +177,8 @@ class TextGeneratorController extends Controller
           }
 
           // Select suffix from list of available values, update prefix and repeat
+          // Get values from form or set default
+
           $wordsGenerated = 0;
             while($wordsGenerated <  TextGeneratorController::$wordsToGenerate){
               if (!array_key_exists($nextPrefix,TextGeneratorController::$nGrams)){
@@ -215,8 +226,15 @@ class TextGeneratorController extends Controller
        * different methods needed to generate the desired number of
        * paragraphs
        */
-      public function generateText()
+      public function generateText(TextGeneratorRequest $request)
+
       {
+
+          TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',200);
+          TextGeneratorController::$paragraphs=$request->input('paragraphs',3);
+          TextGeneratorController::$content=$request->input('content','loremIpsum');
+          $request->flash(); // Send original values back to form
+
           TextGeneratorController::selectSource();
           TextGeneratorController::loadTextCorpus();
           TextGeneratorController::buildNGrams();

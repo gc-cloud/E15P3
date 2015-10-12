@@ -775,9 +775,9 @@ class TextGeneratorData{
     Love you, love you
     Love you, love you
     And in the end, the love you take
-    Is equal to the love you make";
+    Is equal to the love you make
 
-  static $ladyGaga = "
+
     You've gotta a lotta lotta nerve
 
     Coming here when I'm still with him

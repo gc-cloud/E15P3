@@ -35,10 +35,10 @@
             </div>
             <div class="row">
               <div class="col-sm-2">
-                {!! Form::select('source', array('songs'=>'songs','loremIpsum'=>'loremIpsum','repeatable'=>'repeatable','hamlet'=>'hamlet','ladyGaga'=>'ladyGaga','hamlet'=>'hamlet'),'songs') !!}
+                {!! Form::select('content', array('songs'=>'Song Lyrics','loremIpsum'=>'Lorem Ipsum','hamlet'=>'Hamlet','cooking'=>'Cooking Recipes'),'Song Lyrics') !!}
               </div>
               <div class="col-sm-6">
-                <label for='source'>Content</label>
+                <label for='content'>Content</label>
               </div>
             </div>
 
