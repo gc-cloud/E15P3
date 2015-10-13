@@ -9,6 +9,8 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
+
+
 body {
   margin: 0; }
 
@@ -5992,7 +5994,7 @@ button.close {
     display: none !important; } }
 
 /* Add site specific CSS.  After compiling with Elixir (Gulp) this code will be available
-in  public\css\app.css 
+in  public\css\app.css
 html, body {
     height: 100%;
 }
@@ -6023,3 +6025,10 @@ body {
 */
 
 /*# sourceMappingURL=app.css.map */
+.carousel{
+  height: 250px;
+}
+.carousel-inner{
+width:100%;
+max-height: 200px !important;
+}
