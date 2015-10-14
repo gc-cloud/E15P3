@@ -27,3 +27,5 @@ Route::match(['get','post'],'passwordgenerator',
 Route::get('acknowledgements', 'AcknowledgementsController@getIndex');
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+This is a stupid change!
