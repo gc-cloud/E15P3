@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
         $this->call(NamesSeeder::class);
         $this->call(SurnamesSeeder::class);
+        $this->call(Email_providersSeeder::class);
+        $this->call(HobbiesSeeder::class);
 
         Model::reguard();
     }
