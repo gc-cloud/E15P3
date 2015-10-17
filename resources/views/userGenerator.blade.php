@@ -21,20 +21,21 @@
 <div class="container">
   {!! Form::open(array('route' => 'usergenerator', 'class' => 'form')) !!}
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-4">
         @if(!empty($photo))  {!! HTML::image('images/'.$photo , 'a picture', array('class'=>'img-circle', 'width'=>'140', 'height'=>'140')) !!} @endif
       </div>
-      <div class="col-xs-6">
-        <p> @if(!empty($fullName)) {{$fullName}} @endif</p>
-        <p> @if(!empty($hobby)) {{$hobby}} @endif</p>
-        <p> @if(!empty($birthDate)) {{$birthDate}} @endif</p>
+      <div class="col-xs-8">
+
+        <h3>  {{$name}}  {{$surname}} </h3>
+          <ul>
+            <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}</li><br>
+            <li class="glyphicon glyphicon-heart"> {{$hobby}}</li><br>
+            <li class="glyphicon glyphicon-envelope"> {{$name}}.{{$surname}}&#64;{{$email}}</li>
+          </ul>
+
       </div>
     </div>
-    <!-- Iterate over results of eloquent query in user Generator Controller index-->
-    <h1> About me: </h1>
-      <ul>
-        <li>I like {{$hobby}}</li>
-      </ul>
+
 
   {!! Form::close() !!}
 

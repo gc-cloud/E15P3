@@ -14,6 +14,7 @@ class Email_providersSeeder extends Seeder
 
         DB::table('email_providers')->insert(array(
           array('id'=>1, 'email_provider'=>'gmail.com'),
+          array('id'=>2, 'email_provider'=>'piedpiper.com'),
           array('id'=>3, 'email_provider'=>'yahoo.com'),
           array('id'=>4, 'email_provider'=>'aol.com'),
           array('id'=>5, 'email_provider'=>'rogers.com'),
