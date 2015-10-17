@@ -25,13 +25,6 @@ class TextGeneratorController extends Controller
       static $nGrams =array();
       static $content;
 
-    /*  function loadThing(TextGeneratorRequest $request){
-          TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',300);
-      }
-*/
-
-
-
 
       /**
        * Remove HTML tags, including invisible text such as style and
@@ -206,7 +199,6 @@ class TextGeneratorController extends Controller
        */
       public function printOutput(){
         TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
-        //echo "<p>".TextGeneratorController::$textOutput."</p>";
         TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<p>".TextGeneratorController::$textOutput."</p>";
       }
 
@@ -222,7 +214,7 @@ class TextGeneratorController extends Controller
           TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',100);
           TextGeneratorController::$paragraphs=$request->input('paragraphs',3);
           TextGeneratorController::$content=$request->input('content','loremIpsum');
-          $request->flash(); // Send original values back to form
+          $request->flash(); // This is cool! Send original values back to form
 
           TextGeneratorController::selectSource();
           TextGeneratorController::loadTextCorpus();
@@ -232,9 +224,8 @@ class TextGeneratorController extends Controller
             TextGeneratorController::printOutput();
         }
 
-        //$request->flash(); // Send original values back to form
-        $showThis = TextGeneratorController::$allParagraphs;
-        return view('textGenerator',compact('allParagraphs','showThis'));
+        $allParagraphs = TextGeneratorController::$allParagraphs;
+        return view('textGenerator',compact('allParagraphs'));
 
       }
 }

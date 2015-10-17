@@ -67,8 +67,13 @@
 
 @section('content')
   <div class="container">
-      {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
-            <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($password)) {{$password}} @endif</h3>
-      {!! Form::close() !!}
+    <div class="row">
+      <div class="col-xs-6">
+            @if(!empty($message)) <h3 class="glyphicon glyphicon-lock"> {{$message}}  </h3> @endif
+    </div>
+    <div class="col-xs-6">
+          <h3> @if(!empty($password)) {{$password}} @endif</h3>
+  </div>
+  </div>
   </div>
 @endsection

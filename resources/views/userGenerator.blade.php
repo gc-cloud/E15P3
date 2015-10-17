@@ -19,13 +19,11 @@
 
 @section('content')
 <div class="container">
-  {!! Form::open(array('route' => 'usergenerator', 'class' => 'form')) !!}
     <div class="row">
       <div class="col-xs-4">
         @if(!empty($photo))  {!! HTML::image('images/'.$photo , 'a picture', array('class'=>'img-circle', 'width'=>'140', 'height'=>'140')) !!} @endif
       </div>
       <div class="col-xs-8">
-
         <h3>  {{$name}}  {{$surname}} </h3>
           <ul>
             <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}</li><br>
@@ -35,9 +33,5 @@
 
       </div>
     </div>
-
-
-  {!! Form::close() !!}
-
 </div>
 @endsection

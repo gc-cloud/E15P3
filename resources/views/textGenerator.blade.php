@@ -60,8 +60,10 @@
 
 @section('content')
   <div class="container">
-      {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!}
-            <p>@if(!empty($showThis)) {!!$showThis!!} @endif</p>
-      {!! Form::close() !!}
+      <!-- {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!} -->
+            <!-- <p>@if(!empty($showThis)) {!!$showThis!!} @endif</p> -->
+            <p>@if(!empty($allParagraphs)) {!!$allParagraphs!!} @endif</p>
+
+      <!-- {!! Form::close() !!} -->
   </div>
 @endsection
