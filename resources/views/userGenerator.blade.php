@@ -27,7 +27,7 @@
       <div class="col-xs-6">
         <p> @if(!empty($fullName)) {{$fullName}} @endif</p>
         <p> @if(!empty($hobby)) {{$hobby}} @endif</p>
-        <p> Other info goes here</p>
+        <p> @if(!empty($birthDate)) {{$birthDate}} @endif</p>
       </div>
     </div>
   {!! Form::close() !!}

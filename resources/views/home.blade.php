@@ -11,7 +11,7 @@
       <img class="first-slide" src="images/paperGray.jpg" alt="n-Gram Text Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Text Generator.</h1>
+          <h1>n-Gram Text Generator.</h1>
           <p>Create random text that sounds as if it was written by the original author!.</p>
           <p><a class="btn btn-lg btn-primary" href="textgenerator" role="button">Check it out!</a></p>
         </div>
