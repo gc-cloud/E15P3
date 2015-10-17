@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="images/paperGray.jpg" alt="Text Generator">
+      <img class="first-slide" src="images/paperGray.jpg" alt="n-Gram Text Generator">
       <div class="container">
         <div class="carousel-caption">
           <h1>Text Generator.</h1>
@@ -50,25 +50,21 @@
 
 @section ('content')
     <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="images/randomText.gif" alt="we are random" width="140" height="140">
-          <h2>Text Generator</h2>
-          <p>To be or yite, the question that fields. A ghost is thy future</p>
+          <h2>n-Gram Text Generator</h2>
           <p><a class="btn btn-default" href="textgenerator" role="button">Generate Text &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>
         <div class="col-lg-4">
           <img class="img-circle" src="images/person1.jpg" alt="random user" width="140" height="140">
           <h2>User Generator</h2>
-          <p>My name is Pietra.  I was born in 1987. I don't like trouble.</p>
           <p><a class="btn btn-default" href="usergenerator" role="button">New User &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>
         <div class="col-lg-4">
           <img class="img-circle" src="images/oldLock.jpg" alt="random password" width="140" height="140">
           <h2>Password Generator</h2>
-          <p>ThatIs1FastBycicle!.</p>
           <p><a class="btn btn-default" href="passwordgenerator" role="button">New Password &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+        </div>
+      </div>
 @endsection

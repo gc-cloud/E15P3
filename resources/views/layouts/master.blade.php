@@ -51,7 +51,7 @@
               <ul class="nav navbar-nav">
                 <!-- Note to me: need to fix active class based on URL-->
                 <!--li class="active"><a href="textgenerator">Text Generator</a></li-->
-                <li><a href="textgenerator">Text Generator</a></li>
+                <li><a href="textgenerator">n-Gram Text Generator</a></li>
                 <li><a href="usergenerator">User Generator</a></li>
                 <li><a href="passwordgenerator">Password Generator</a></li>
               </ul>

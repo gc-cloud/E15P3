@@ -8,7 +8,7 @@
         <div class="jumbotron">
           <!-- Display success message with new password-->
         <div class="carousel-caption">
-          <h3>Select Text Preferences</h3>
+          <h3>Text Preferences</h3>
           <!-- Display errors in form : this code is not needed since we have no validation
            we are keeping it to use as a reference for other forms
           <ul>
@@ -47,7 +47,7 @@
 
             <div class="row">
               <div class="col-sm-12">
-                {!! Form::submit('New Text!', array('class'=>'btn btn-primary')) !!}
+                {!! Form::submit('New n-Gram Text!', array('class'=>'btn btn-primary')) !!}
               </div>
             </div>
           {!! Form::close() !!}
