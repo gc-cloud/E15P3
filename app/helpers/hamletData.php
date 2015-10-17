@@ -4,7 +4,7 @@ namespace App\Helpers;
 
   /* Define strings of text containing works to be used as the basis to generate nGrams*/
 
-class hamletData{
+class HamletData{
 
   static $hamlet = "
     SCENE.- Elsinore.

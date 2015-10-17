@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TextGeneratorRequest;
 use App\Helpers\TextGeneratorData; // Class holding all the valid values
-use App\Helpers\hamletData; // Class holding all the valid values
+use App\Helpers\HamletData; // Class holding all the valid values
 
 class TextGeneratorController extends Controller
 {
@@ -83,7 +83,7 @@ class TextGeneratorController extends Controller
                 TextGeneratorController::$source = file_get_contents('http://dwa15.com/','<br>');
                 break;
               case "hamlet":
-                TextGeneratorController::$source = hamletData::$hamlet;
+                TextGeneratorController::$source = HamletData::$hamlet;
                 break;
 
             }
