@@ -4,7 +4,7 @@
 @section('carousel')
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Password Generator">
+      <img class="first-slide" src="images/keys.jpg" alt="Password Generator">
       <div class="container">
         <div class="carousel-caption">
           <h1>Password Generator.</h1>
@@ -66,15 +66,9 @@
 @endsection
 
 @section('content')
-<div class="container">
-  <div class="jumbotron">
-
-    {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
-      <div class="row">
-        <!-- Display success message with new password-->
-          <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($password)) {{$password}} @endif</h3>
-      </div>
-    {!! Form::close() !!}
+  <div class="container">
+      {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
+            <h3>@if(!empty($message)) {{$message}} @endif @if(!empty($password)) {{$password}} @endif</h3>
+      {!! Form::close() !!}
   </div>
-</div>
 @endsection

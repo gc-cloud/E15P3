@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="images/paperGray.jpg" alt="First slide">
+      <img class="first-slide" src="images/paperGray.jpg" alt="Text Generator">
       <div class="container">
         <div class="carousel-caption">
           <h1>Text Generator.</h1>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="item">
-      <img class="second-slide" src="images/grayPeople.gif" alt="Second slide">
+      <img class="second-slide" src="images/grayPeople.gif" alt="User Generator">
       <div class="container">
         <div class="carousel-caption">
           <h1>User Generator.</h1>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="item">
-      <img class="third-slide" src="images/keys.jpg" alt="Third slide">
+      <img class="third-slide" src="images/keys.jpg" alt="Password Generator">
       <div class="container">
         <div class="carousel-caption">
           <h1>Password Generator.</h1>

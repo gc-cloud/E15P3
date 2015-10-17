@@ -3,7 +3,7 @@
 @section('carousel')
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Text Generator">
+      <img class="first-slide" src="images/paperGray.jpg" alt="Text Generator">
       <div class="container">
         <div class="jumbotron">
           <!-- Display success message with new password-->
@@ -40,7 +40,7 @@
                 <label for='content'>Source</label>
               </div>
               <div class="col-sm-2">
-                {!! Form::select('content', array('songs'=>'Song Lyrics','loremIpsum'=>'Lorem Ipsum','hamlet'=>'Hamlet','cooking'=>'Cooking Recipes','dwa15'=>'dwa15.com '),'Song Lyrics') !!}
+                {!! Form::select('content', array('loremIpsum'=>'Lorem Ipsum','songs'=>'Song Lyrics','hamlet'=>'Hamlet','cooking'=>'Cooking Recipes','dwa15'=>'dwa15.com '),'Lorem Ipsum') !!}
               </div>
 
             </div>
@@ -59,15 +59,9 @@
 @endsection
 
 @section('content')
-
-<div class="container">
-  <div class="jumbotron">
-    <!-- Display success message with new password-->
-    {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!}
-      <div class="row">
-          <p>@if(!empty($showThis)) {!!$showThis!!} @endif</p>
-      </div>
-    {!! Form::close() !!}
+  <div class="container">
+      {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!}
+            <p>@if(!empty($showThis)) {!!$showThis!!} @endif</p>
+      {!! Form::close() !!}
   </div>
-</div>
 @endsection
