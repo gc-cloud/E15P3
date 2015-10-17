@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Hobby;
+use App\Name;
+use App\Photo;
+use App\Surname;
+use App\User;
+use App\Email_provider;
 
 class UserGeneratorController extends Controller
 {
@@ -50,8 +56,29 @@ public  function generateUser(){
       //$hobby = implode($hobby);
     //  $photo = implode($photo);
     //  echo $fullName. "<br>" . $hobby;
+
+    /* Select random values from MySQL database to generate
+     * a user */
+      $hobbyKey = mt_rand(1,Hobby::count());
+      $hobby = Hobby::find($hobbyKey)->hobby;
+
+      $nameKey = mt_rand(1,Name::count());
+      $name = Name::find($nameKey)->name;
+
+
+      $surnameKey = mt_rand(1,Surname::count());
+      $surname = Surname::find($surnameKey)->surname;
+
+      $photoKey = mt_rand(1,Photo::count());
+      $photo = Photo::find($photoKey)->photo;
+
+      $emailKey = mt_rand(1,Email_provider::count());
+      $email = Email_provider::find($emailKey)->email_provider;
+
+
+      // Pass values to view
       return view('userGenerator',
-      compact('fullName','hobby','photo','birthDate') );
+      compact('fullName','hobby','photo','birthDate','hobby','name', 'surname','email') );
 
   }
   /**
@@ -70,7 +97,9 @@ public  function generateUser(){
      */
     public function index()
     {
-        //
+        $hobbies = Hobby::orderBy('hobby', 'asc');
+        return view('userGenerator')->with('hobbies',$hobbies);
+
     }
 
     /**

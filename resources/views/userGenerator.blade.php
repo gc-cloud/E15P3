@@ -30,6 +30,12 @@
         <p> @if(!empty($birthDate)) {{$birthDate}} @endif</p>
       </div>
     </div>
+    <!-- Iterate over results of eloquent query in user Generator Controller index-->
+    <h1> About me: </h1>
+      <ul>
+        <li>I like {{$hobby}}</li>
+      </ul>
+
   {!! Form::close() !!}
 
 </div>
