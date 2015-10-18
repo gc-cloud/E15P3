@@ -81,10 +81,10 @@
       ========================================================= -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p><a href="http://www.zudbu.com">&copy; 2015 Zudbu.</p>
+        <p><a href="http://www.zudbu.com">&copy; 2015 Zudbu</a>.</p>
       </footer>
 
-    </div>
+
     <!-- /.container -->
 
 
