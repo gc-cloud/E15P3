@@ -207,7 +207,9 @@ class TextGeneratorController extends Controller
        */
       public function printOutput(){
         TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
-        TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<p>".TextGeneratorController::$textOutput."</p>";
+        // TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<p>".TextGeneratorController::$textOutput."</p>";
+        TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<br>".TextGeneratorController::$textOutput;
+
       }
 
       /**
