@@ -15,15 +15,13 @@ use App\Email_provider;
 class UserGeneratorController extends Controller
 {
 
-
-
 public  function generateUser(){
       // Set random seed.
       mt_srand();;
 
-    // Pick a date between 30 and 20 years ago
-    $daysAgoMax = -30*365;
-    $daysAgoMin = -20*365;
+    // Pick a birth date between 35 and 25 years ago
+    $daysAgoMax = -35*365;
+    $daysAgoMin = -25*365;
     $birthDate =  date('Y-m-d', strtotime( '+'.mt_rand((int) $daysAgoMax,(int) $daysAgoMin).' days'));
 
     /* Select random values from MySQL database to generate
@@ -41,9 +39,8 @@ public  function generateUser(){
       $gender = Name::find($nameKey)->gender;
 
       // $photo:  select a random photo that is consistent with the name gender
-       $photo = Photo::orderByRaw('RAND()')->where('gender',$gender)->take(1)->get();
-       $photo = $photo->get(0)->path;
-    //  $photo = 'person1.jpg';
+      $photo = Photo::orderByRaw('RAND()')->where('gender',$gender)->take(1)->get();
+      $photo = $photo->get(0)->path;
 
       $emailKey = mt_rand(1,Email_provider::count());
       $emailProvider = Email_provider::find($emailKey)->email_provider;
@@ -52,16 +49,7 @@ public  function generateUser(){
       // Pass values to view
       return view('userGenerator',
       compact('fullName','hobby','photo','birthDate','hobby','name', 'surname','email') );
-
   }
-  /**
-   * Handle page load through get
-   *
-   */
-    public function getIndex()
-    {
-        return view('userGenerator');
-    }
 
     /**
      * Remove the specified resource from storage.

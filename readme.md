@@ -28,7 +28,7 @@ Developer's Best Friend [video https://youtu.be/sJJcIBwy07A](https://youtu.be/sJ
 |  is my command 	|    your	|  
 |   my command your	|   wish	|  
 |   command your wish	|   is	|  
- | is my desire| your|
+| is my desire| your|
 |  my desire your    | wish|
 |  desire your wish  | is|
 |  is my order       | your  |
@@ -37,14 +37,14 @@ Developer's Best Friend [video https://youtu.be/sJJcIBwy07A](https://youtu.be/sJ
 
 Note how text is wrapped around to build the edge cases.
 
-To build the random text, we do the following
+To build the random text, we do the following:
   - pick a random prefix to start
   - select a valid word from the list of suffixes
   - select the next prefix by dropping the first word of the previous prefix and adding the suffix
   - repeat until the desired number of words is produced
 
-  The effect of using this algorithm is that the random text resembles the style of the original
-  author.
+  *The effect of using this algorithm is that the random text resembles the style of the original
+  author.*
 
   The text generator comes with preloaded text for "Hamlet", "Song Lyrics" and "Lorem Impsum".
   As a bonus feature, the text generator also has the ability to scrap content
@@ -59,6 +59,8 @@ To build the random text, we do the following
     surnames, photos, hobbies and email domains
   - Each table has a corresponding model that extends Eloquent.  Queries to each table are made
     using the corresponding models
+  - The tables for first names and photos contain a column to identify the relevant gender.  This
+    way we can generate random users whose names match the photos.
 
 ### Password Generator
   As an extra challenge, I re-implemented my previous custom functions for password generator.
