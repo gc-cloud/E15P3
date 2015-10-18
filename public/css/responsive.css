@@ -12,7 +12,9 @@ footer {
   margin-top: 20px;
   padding: 20px;
 }
-
+select {
+  color: #333 !important;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
