@@ -18,7 +18,7 @@
           {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
             <div class="row">
               <div class="col-sm-6">
-                <label for='wordCount'># of Words</label>
+                <label ># of Words</label>
               </div>
               <div class="col-sm-2">
                   {!! Form::select('wordCount', array('1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5),3) !!}
@@ -27,7 +27,7 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <label for='numberCount'># of Numbers</label>
+                <label ># of Numbers</label>
               </div>
               <div class="col-sm-2">
                 {!! Form::select('numberCount', array('0'=>0,'1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5),1) !!}
@@ -36,7 +36,7 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <label for='specialCharacterCount'># of Special Characters</label>
+                <label ># of Special Characters</label>
               </div>
               <div class="col-sm-2">
                 {!! Form::select('specialCharacterCount', array('0'=>0,'1'=>1,'2'=>2,'3'=>3,'4'=>4,'5'=>5),1) !!}
