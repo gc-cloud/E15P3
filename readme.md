@@ -43,12 +43,12 @@ To build the random text, we do the following:
   - select the next prefix by dropping the first word of the previous prefix and adding the suffix
   - repeat until the desired number of words is produced
 
-  *The effect of using this algorithm is that the random text resembles the style of the original
-  author.*
+  **The effect of using this algorithm is that the random text resembles the style of the original
+  author.**
 
   The text generator comes with preloaded text for "Hamlet", "Song Lyrics" and "Lorem Impsum".
-  As a bonus feature, the text generator also has the ability to scrap content
-  from websites. To do the scrapping I leveraged an  open source function from Nadeau Software.
+  As a bonus feature, the text generator also has the ability to **scrap content
+  from websites.** To do the scrapping I leveraged an  open source function from Nadeau Software.
 
 
 #### User Generator
