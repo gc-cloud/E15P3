@@ -7,7 +7,7 @@
       <img class="first-slide" src="images/keys.jpg" alt="Password Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Password Generator.</h1>
+          <h3>Password Generator.</h3>
           {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
             <div class="row">
               <div class="col-sm-6">

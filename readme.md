@@ -50,9 +50,9 @@ To build the random text, we do the following:
   **The effect of using this algorithm is that the random text resembles the style of the original
   author.**
 
-  The text generator comes with preloaded text for "Hamlet", "Song Lyrics" and "Lorem Impsum".
+  The text generator comes with preloaded content for "Hamlet" (text file), "Song Lyrics" and "Lorem Impsum" (arrays).
   As a bonus feature, the text generator also has the ability to **scrap content
-  from websites.** To do the scrapping I leveraged an  open source function from Nadeau Software.
+  from websites.** To do the scrapping, I imported an  open source function from Nadeau Software.
 
 
 #### User Generator
@@ -76,11 +76,11 @@ To build the random text, we do the following:
 ### General features
 - The app uses bootstrap and bootstrap's carousel template.  The site is responsive
 and uses javascript to implement a slide show, collapsible menus and other navigational aids.
-- All the requests leverage Laravel's routes, controllers and views.  The basic flow is
+- All the requests use Laravel's routes, controllers and views.  The basic flow is
   request -> routes -> controller -> view
 - The app is powered with HTML forms.  These forms were implemented using Blade
-- The text generator and the password generator forms leverage Laravel's http
- requests and  flash messages to keep the values entered by the user
+- The text generator and the password generator forms take advantage of HTTP
+ requests and  flash messages to keep the values entered by the user (sticky forms)
 - The app was built leveraging several packages including  laravel collective html,
 laravel-debugbar, and Rap2hpoutre's log viewer
 - All custom classes built by me use proper namespacing and are included within the

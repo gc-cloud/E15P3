@@ -8,7 +8,7 @@
         <div class="jumbotron">
           <!-- Display success message with new password-->
         <div class="carousel-caption">
-          <h3> Generate random text with the style of the original author!</h3>
+          <h3> Generate random text that mimics the original author!</h3>
           {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!}
             <div class="row">
               <div class="col-sm-4">

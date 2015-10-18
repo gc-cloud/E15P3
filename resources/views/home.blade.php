@@ -1,5 +1,4 @@
 @extends('layouts.master')
-
 @section ('carousel')
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -11,8 +10,8 @@
       <img class="first-slide" src="images/paperGray.jpg" alt="n-Gram Text Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>n-Gram Text Generator.</h1>
-          <p>Create random text that sounds as if it was written by the original author!.</p>
+          <h3>n-Gram Text Generator.</h3>
+          <p>Create random text that mimics the original author!</p>
           <p><a class="btn btn-lg btn-primary" href="textgenerator" role="button">Check it out!</a></p>
         </div>
       </div>
@@ -21,8 +20,8 @@
       <img class="second-slide" src="images/grayPeople.gif" alt="User Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>MVC User Generator.</h1>
-          <p>Create fake users for testing, posing or for fun!</p>
+          <h3>MVC User Generator.</h3>
+          <p>Create fictional users with one button!</p>
           <p><a class="btn btn-lg btn-primary" href="usergenerator" role="button">Create</a></p>
         </div>
       </div>
@@ -31,8 +30,8 @@
       <img class="third-slide" src="images/keys.jpg" alt="Password Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Password Generator.</h1>
-          <p>Generate a hard to crack password that you can remember!.</p>
+          <h3>Password Generator.</h3>
+          <p>Create a strong password that you can remember!</p>
           <p><a class="btn btn-lg btn-primary" href="passwordgenerator" role="button">New Password</a></p>
         </div>
       </div>

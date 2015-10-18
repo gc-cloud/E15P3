@@ -6,8 +6,8 @@
       <img class="first-slide" src="images/grayPeople.gif" alt="User Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>MVC User Generator.</h1>
-          <p>Create fictional characters! It is fun!</p>
+          <h3>MVC User Generator.</h3>
+          <p>Create fictional characters with the click of a button!</p>
           {!! Form::open(array('route' => 'usergenerator', 'class' => 'form')) !!}
             {!! Form::submit('New User', array('class'=>'btn btn-primary')) !!}
           {!! Form::close() !!}
