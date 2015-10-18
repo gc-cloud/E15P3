@@ -13,21 +13,21 @@ class PasswordGeneratorController extends Controller
 {
   /*  Select random elements form a source
    * (for example: specialCharacters,numbers,wordCorpus) and then add the
-   * elements to a destination (arguably the password array). If $camelCase is true then
+   * elements to a destination (arguably the password array). If $PascalCase is true then
    * each element start with an uppercase.  This function handles
    * the special cases of 1 element (not an array) and 0 elements (ignore)
    */
-    private function addElements ($source, &$destination, $count, $camelCase)
+    private function addElements ($source, &$destination, $count, $PascalCase)
     {
         if ($count==0) return; /* if no elements we do nothing */
         $randomKeys  = array_rand($source, $count);
         if (count($randomKeys) == 1){
           /* If only one element, array_rand returns an integer, not an array */
-          ($camelCase=='true')? $destination[] = ucfirst($source[$randomKeys]) : $destination[] = $source[$randomKeys];
+          ($PascalCase=='true')? $destination[] = ucfirst($source[$randomKeys]) : $destination[] = $source[$randomKeys];
         } else {
           /* If elements <> 0,1 then we have an array of results */
           foreach ($randomKeys as $randomKey) {
-            ($camelCase=='true')?  $destination[] = ucfirst($source[$randomKey]) :$destination[] = $source[$randomKey];
+            ($PascalCase=='true')?  $destination[] = ucfirst($source[$randomKey]) :$destination[] = $source[$randomKey];
            }
         }
     }
@@ -46,12 +46,12 @@ class PasswordGeneratorController extends Controller
        $wordCount=$request->input('wordCount',3);
        $numberCount=$request->input('numberCount',1);
        $specialCharacterCount=$request->input('specialCharacterCount',1);
-       $camelCase=$request->input('camelCase','false');
+       $PascalCase=$request->input('PascalCase','false');
 
       /* Call the addElements function to select words, numbers and special characters */
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password, $wordCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$numbers, $password, $numberCount, $camelCase);
-        PasswordGeneratorController::addElements (PasswordGeneratorData::$specialCharacters, $password, $specialCharacterCount, $camelCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$wordCorpus, $password, $wordCount, $PascalCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$numbers, $password, $numberCount, $PascalCase);
+        PasswordGeneratorController::addElements (PasswordGeneratorData::$specialCharacters, $password, $specialCharacterCount, $PascalCase);
 
        /* At this point, the $password array has a list of randomly selected
         * specialCharacters, numbers and words. However, they are in the order that the

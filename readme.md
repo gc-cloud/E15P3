@@ -12,7 +12,7 @@ random passwords.
 Please visit [p3.zudbu.com](http://p3.zudbu.com).  This domain is dedicated (currently) to my CSCIE15 work.
 
 ### Demo location
-Developer's Best Friend [youtube video ](https://youtu.be/AZXvgetbxvw).
+Developer's Best Friend [youtube video](https://youtu.be/AZXvgetbxvw).
 
 ***
 
@@ -68,16 +68,14 @@ To build the random text, we do the following:
 
 ### Password Generator
   As an extra challenge, I re-implemented my previous custom functions for password generator.
-  This time, the code was implemented on an object oriented fashion with a controller
-  that extends Laravel's controller.   
+  This time, the code was implemented using an object oriented approach extendings Laravel's controller class.   
   - Options for words, numbers and special characters
-  - Extra feature to select CamelCase
+  - Extra feature to select PascalCase
 
 
 ### General features
 - The app uses bootstrap and bootstrap's carousel template.  The site is responsive
-and has uses javascript to implement a slide show of the three generators with
-left and right arrows, collapsable menus and other navigational aids.
+and uses javascript to implement a slide show, collapsible menus and other navigational aids.
 - All the requests leverage Laravel's routes, controllers and views.  The basic flow is
   request -> routes -> controller -> view
 - The app is powered with HTML forms.  These forms were implemented using Blade
@@ -96,9 +94,9 @@ laravel-debugbar, and Rap2hpoutre's log viewer
 - This app was built using the Laravel framework. The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 - Song Lyrics from Adele, Idina Menzel, Beatles, Rolling Stones, Lady Gaga and Harvard
 - LoremIpsum text from http://lipsum.com
-- Images:
-  - person1.jpg flickr Lorena by Noval Goya
-  - person2.jpg to person3.jpg: (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons (except when noted)
+- Images:  - Pictures licensed [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0), via       Wikimedia Commons (except when noted)
+  - person1.jpg flickr Lorena by Noval Goya  
+  - person2.jpg to person3.jpg:
   - person2.jpg by Tonybog  
   - person 3.jpg By Academic9
   - person4.jpg By Siavash.aghdaie
@@ -109,6 +107,6 @@ laravel-debugbar, and Rap2hpoutre's log viewer
   - person9.jpg By Aaron bushkowsky
   - person10.jpg By Anna Marcello
   - person11.jpg By Sandrojhonston
-  - person12.jpg By Jorge Arriagada (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons
-  - person13.jpg By MirreNL  - person14.jpg By Tabercil (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
-  - Code for function strip_html_tags() from article at [Nadeau Software](http://nadeausoftware.com/articles/2007/09/php_tip_how_strip_html_tags_web_page) Open source license [OSI BSD ] (http://www.opensource.org/licenses/bsd-license.php)
+  - person12.jpg By Jorge Arriagada (Own work) [GFDL](http://www.gnu.org/copyleft/fdl.html) or [CC BY-SA 4.0-3.0-2.5-2.0-1.0] (http://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons
+  - person13.jpg By MirreNL  - person14.jpg By Tabercil (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
+  - Code for function strip_html_tags() from article at [Nadeau Software](http://nadeausoftware.com/articles/2007/09/php_tip_how_strip_html_tags_web_page) Open source license [OSI BSD](http://www.opensource.org/licenses/bsd-license.php)

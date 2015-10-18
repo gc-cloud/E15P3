@@ -38,10 +38,10 @@
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <label>Use CamelCase</label>
+                <label>Use PascalCase</label>
               </div>
               <div class="col-sm-2">
-                {!!Form::checkbox('camelCase', 'true', false) !!}
+                {!!Form::checkbox('PascalCase', 'true', false) !!}
               </div>
 
             </div>
