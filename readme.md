@@ -1,7 +1,9 @@
 # Laravel PHP Project - P3
 
-**Developers Best Friend*** helps developers generate random text, random users and
+**Developers Best Friend** helps developers generate random text, random users and
 random passwords.
+
+***
 
 ### Repository Location
 [GitHub gc-cloud E15](https://github.com/gc-cloud/E15P3)
@@ -10,7 +12,9 @@ random passwords.
 Please visit [p3.zudbu.com](http://p3.zudbu.com).  This domain is dedicated (currently) to my CSCIE15 work.
 
 ### Demo location
-Developer's Best Friend [video https://youtu.be/AZXvgetbxvw](https://youtu.be/AZXvgetbxvw) in youtube.
+Developer's Best Friend [youtube video ](https://youtu.be/AZXvgetbxvw).
+
+***
 
 ### Features by solution
 
@@ -35,7 +39,7 @@ Developer's Best Friend [video https://youtu.be/AZXvgetbxvw](https://youtu.be/AZ
 |  my order your     | wish|
 |  order your wish   | is|
 
-Note how text is wrapped around to build the edge cases.
+*Note how text is wrapped around to handle the edge cases.*
 
 To build the random text, we do the following:
   - pick a random prefix to start
@@ -85,6 +89,7 @@ laravel-debugbar, and Rap2hpoutre's log viewer
   'app' folder to leverage Laravel's autoloading
 - All pages were checked using [W3c's Unicorn validator](https://validator.w3.org/)
 
+***
 
 ### Acknowledgements
 - Theme based on bootstrap's carrousel template.
