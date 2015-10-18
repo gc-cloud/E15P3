@@ -8,13 +8,6 @@
       <div class="container">
         <div class="carousel-caption">
           <h1>Password Generator.</h1>
-          <!-- Display errors in form : this code is not needed since we have no validation
-           we are keeping it to use as a reference for other forms
-          <ul>
-              @foreach($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul> -->
           {!! Form::open(array('route' => 'passwordgenerator', 'class' => 'form')) !!}
             <div class="row">
               <div class="col-sm-6">

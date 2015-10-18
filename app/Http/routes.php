@@ -13,8 +13,6 @@
 
 Route::get('/','HomeController@getIndex');
 
-//Route::get('/textgenerator', 'TextGeneratorController@getIndex');
-
 Route::match(['get','post'],'textgenerator',
     ['as' => 'textgenerator', 'uses' => 'TextGeneratorController@generateText']);
 

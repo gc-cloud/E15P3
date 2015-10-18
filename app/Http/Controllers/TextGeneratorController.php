@@ -198,19 +198,11 @@ class TextGeneratorController extends Controller
               $nextPrefix=implode(" ",$nextPrefix);
           }
 
-          // End paragraph with "..."
+          // End paragraph with "..." and add html tags
           array_push(TextGeneratorController::$textOutput,"...");
+          TextGeneratorController::$textOutput = "<p>".implode(" ",TextGeneratorController::$textOutput)."</p>";
       }
 
-      /**
-       *  Output paragraph.  Turn array into string and echo
-       */
-      public function printOutput(){
-        TextGeneratorController::$textOutput = implode(" ",TextGeneratorController::$textOutput);
-        // TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<p>".TextGeneratorController::$textOutput."</p>";
-        TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs."<br>".TextGeneratorController::$textOutput;
-
-      }
 
       /**
        * generateText:  This method is a wrapper that calls all the
@@ -231,7 +223,7 @@ class TextGeneratorController extends Controller
           TextGeneratorController::buildNGrams();
           for ($i = 0 ; $i < TextGeneratorController::$paragraphs; $i++){
             TextGeneratorController::generateParagraph();
-            TextGeneratorController::printOutput();
+            TextGeneratorController::$allParagraphs = TextGeneratorController::$allParagraphs.TextGeneratorController::$textOutput;
         }
 
         $allParagraphs = TextGeneratorController::$allParagraphs;

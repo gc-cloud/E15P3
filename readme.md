@@ -14,6 +14,7 @@ settings took place:
 to get values, flash messages and produce sticky Forms
 - packages: using laravel collective html
 - packages: used laravel-debugbar
+Route::get('logs', '\\Rap2hpoutre\\LaravelLogViewer\\LogViewerController@index');
 
 ## Extra features
 - Compiled sass
