@@ -109,4 +109,11 @@ laravel-debugbar, and Rap2hpoutre's log viewer
   - person11.jpg By Sandrojhonston
   - person12.jpg By Jorge Arriagada (Own work) [GFDL](http://www.gnu.org/copyleft/fdl.html) or [CC BY-SA 4.0-3.0-2.5-2.0-1.0](http://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0), via Wikimedia Commons
   - person13.jpg By MirreNL  - person14.jpg By Tabercil (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons
+  - person14.jpg by Cirdan
+  - person15.jpg by WFinch
+  - person16.jpg by Magnus Manske
+  - person18.jpg by Shiras845
+  - person18.jpg by Neelix
+  - person19.jpg by Schnouf25
+  - person20.jpg by Simenon
   - Code for function strip_html_tags() from article at [Nadeau Software](http://nadeausoftware.com/articles/2007/09/php_tip_how_strip_html_tags_web_page) Open source license [OSI BSD](http://www.opensource.org/licenses/bsd-license.php)

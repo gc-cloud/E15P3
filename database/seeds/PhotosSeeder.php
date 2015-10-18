@@ -12,21 +12,26 @@ class PhotosSeeder extends Seeder
     public function run()
     {
       DB::table('photos')->insert(array(
-
-        array('id'=>1, 'path'=>'person1.jpg', 'gender'=>'F'),
-        array('id'=>2, 'path'=>'person2.jpg', 'gender'=>'F'),
-        array('id'=>3, 'path'=>'person3.jpg', 'gender'=>'F'),
-        array('id'=>4, 'path'=>'person4.jpg', 'gender'=>'M'),
-        array('id'=>5, 'path'=>'person5.jpg', 'gender'=>'F'),
-        array('id'=>6, 'path'=>'person6.jpg', 'gender'=>'M'),
-        array('id'=>7, 'path'=>'person7.jpg', 'gender'=>'F'),
-        array('id'=>8, 'path'=>'person8.jpg', 'gender'=>'M'),
-        array('id'=>9, 'path'=>'person9.jpg', 'gender'=>'M'),
-        array('id'=>10, 'path'=>'person10.jpg', 'gender'=>'F'),
-        array('id'=>11, 'path'=>'person11.jpg', 'gender'=>'M'),
-        array('id'=>12, 'path'=>'person12.jpg', 'gender'=>'M'),
-        array('id'=>13, 'path'=>'person13.jpg', 'gender'=>'M'),
-        array('id'=>14, 'path'=>'person14.jpg', 'gender'=>'M'),
+        array('path'=>'person1.jpg', 'gender'=>'F'),
+        array('path'=>'person2.jpg', 'gender'=>'F'),
+        array('path'=>'person3.jpg', 'gender'=>'F'),
+        array('path'=>'person4.jpg', 'gender'=>'M'),
+        array('path'=>'person5.jpg', 'gender'=>'F'),
+        array('path'=>'person6.jpg', 'gender'=>'M'),
+        array('path'=>'person7.jpg', 'gender'=>'F'),
+        array('path'=>'person8.jpg', 'gender'=>'M'),
+        array('path'=>'person9.jpg', 'gender'=>'M'),
+        array('path'=>'person10.jpg', 'gender'=>'F'),
+        array('path'=>'person11.jpg', 'gender'=>'M'),
+        array('path'=>'person12.jpg', 'gender'=>'M'),
+        array('path'=>'person13.jpg', 'gender'=>'M'),
+        array('path'=>'person14.jpg', 'gender'=>'F'),
+        array('path'=>'person15.jpg', 'gender'=>'F'),
+        array('path'=>'person16.jpg', 'gender'=>'F'),
+        array('path'=>'person17.jpg', 'gender'=>'F'),
+        array('path'=>'person18.jpg', 'gender'=>'M'),
+        array('path'=>'person19.jpg', 'gender'=>'M'),
+        array('path'=>'person20.jpg', 'gender'=>'M'),
 
       ));
     }
