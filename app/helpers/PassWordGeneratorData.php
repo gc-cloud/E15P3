@@ -6,7 +6,7 @@ namespace App\Helpers;
   valid values to generate a password. There is one array for each data type.
   These are: special characters, numbers and words. These data structures are
   accessed by the file functions.php */
-  /*$specialCharacters = array("!","@","#","$","%","&","*","_","+",".");*/
+
 class PasswordGeneratorData{
 
   static  $specialCharacters = array("&#33;","&#35;","&#36;","&#37;","&#38;","&#42;","&#43;","&#46;","&#64;","&#95;");
@@ -76,7 +76,7 @@ class PasswordGeneratorData{
   "sign","thought","list","individual","simple","quality","pressure","accept","answer","resource",
   "identify","left","meeting","determine","prepare","disease","whatever","success","argue","cup",
   "particularly","amount","ability","staff","recognize","indicate","character","growth","loss",
-  "degree","wonder","attack","herself","region","television","box","TV","training","pretty",
+  "degree","wonder","attack","herself","region","television","box","training","pretty",
   "trade","election","everybody","physical","lay","general","feeling","standard","bill",
   "message","fail","outside","arrive","analysis","benefit","sex","forward","lawyer","present",
   "section","environmental","glass","skill","sister","PM","professor","operation","financial",
@@ -85,7 +85,7 @@ class PasswordGeneratorData{
   "democratic","check","environment","leg","dark","various","rather","laugh","guess","executive",
   "prove","hang","entire","rock","forget","claim","remove","manager","enjoy","network","legal",
   "religious","cold","final","main","science","green","memory","card","above","seat","cell",
-  "establish","nice","trial","expert","spring","firm","Democrat","radio","visit","management",
+  "establish","nice","trial","expert","spring","firm","democrat","radio","visit","management",
   "avoid","imagine","tonight","huge","ball","finish","yourself","theory","impact","respond",
   "statement","maintain","charge","popular","traditional","onto","reveal","direction","weapon",
   "employee","cultural","contain","peace","pain","apply","measure","wide","shake","fly","interview",
@@ -155,7 +155,7 @@ class PasswordGeneratorData{
   "farmer","sugar","planet","favorite","explore","obtain","enemy","greatest",
   "complex","surround","athlete","invite","repeat","carefully","soul","scientific",
   "impossible","panel","meaning","mom","married","instrument","predict","weather",
-  "presidential","emotional","commitment","Supreme","bear","pocket","thin",
+  "presidential","emotional","commitment","supreme","bear","pocket","thin",
   "temperature","surprise","poll","proposal","consequence","breath","sight","balance",
   "adopt","minority","straight","connect","works","teaching","belong","aid","advice",
   "okay","photograph","empty","regional","trail","novel","code","somehow","organize",
@@ -165,10 +165,10 @@ class PasswordGeneratorData{
   "package","difficulty","bridge","recommend","obvious","basically","email","generate",
   "anymore","propose","thinking","possibly","trend","visitor","loan","currently","comfortable",
   "investor","profit","angry","crew","accident","meal","hearing","traffic","muscle",
-  "notion","capture","prefer","truly","earth","Japanese","chest","thick","cash","museum",
+  "notion","capture","prefer","truly","earth","japanese","chest","thick","cash","museum",
   "beauty","emergency","unique","internal","ethnic","link","stress","content","select",
   "root","nose","declare","appreciate","actual","bottle","hardly","setting","launch","file",
-  "sick","outcome","ad","defend","duty","sheet","ought","ensure","Catholic","extremely",
+  "sick","outcome","ad","defend","duty","sheet","ought","ensure","catholic","extremely",
   "extent","component","mix","long-term","slow","contrast","zone","wake","airport","brown",
   "shirt","pilot","warn","ultimately","cat","contribution","capacity","ourselves","estate",
   "guide","circumstance","snow","English","politician","steal","pursue","slip","percentage",

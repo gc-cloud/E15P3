@@ -8,9 +8,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TextGeneratorRequest;
 use App\Helpers\TextGeneratorData; // Class holding all the valid values
 use App\Helpers\HamletData; // Class holding all the valid values
+use Goutte\Client;
+
 
 class TextGeneratorController extends Controller
 {
+
 
     /**
      * Set shared variables and default values
@@ -62,13 +65,14 @@ class TextGeneratorController extends Controller
                     "\n\$0", "\n\$0",
                 ),
                 $text );
-                // preg_replace('/\s++/', ' ',$text); // remove redundant white space
             return trim(strip_tags( $text ));
         }
       /**
        * Select Source of content.
        */
       public function selectSource(){
+        // set web Scrapper
+
             switch (TextGeneratorController::$content){
               case 'loremIpsum':
                 TextGeneratorController::$source = TextGeneratorData::$loremIpsum;
@@ -82,6 +86,9 @@ class TextGeneratorController extends Controller
               case "dwa15":
                 TextGeneratorController::$source = file_get_contents('http://dwa15.com/','<br>');
                 break;
+              case "about-harvard":
+                TextGeneratorController::$source = file_get_contents('http://www.harvard.edu/about-harvard/','<br>');
+                break;
               case "hamlet":
                 TextGeneratorController::$source = HamletData::$hamlet;
                 break;
@@ -89,11 +96,12 @@ class TextGeneratorController extends Controller
             }
       }
       /**
-       * Load text corpus. Stript html tags. Remove reduntant white space . Transform into array
+       * Load and sanitize text corpus. Transform into array
        * so we can easily manipulate it.  Copy n-1 words to end of array to
        * handle edge cases
        */
       public function loadTextCorpus(){
+
 
         // Prepare for manipulation. Sanitize text and transform to array
         TextGeneratorController::$textCorpus = TextGeneratorController::strip_html_tags(TextGeneratorController::$source);
@@ -116,9 +124,9 @@ class TextGeneratorController extends Controller
       /**
        * Build nGram.  The nGram is a map of key => value pairs where each key (prefix)
        * is a string representing consecutive combinations of words with size
-       * nValue and each value (suffix) is an array containing the valid words to follow each
-       * prefix.  Valid words can be repeated in the array since we want to capture
-       * the probability of occurrence.  To build, we find all prefixes, add suffix for each prefix.
+       * nValue, and each value (suffix) is an array containing the valid words to follow each
+       * prefix.  Valid words are repeated in the array since we want to capture
+       * the probability of occurrence.  To build, we find all prefixes and all suffixes for each prefix.
        * The if-else initializes or updates the map
        */
       public function buildNGrams(){
@@ -210,13 +218,13 @@ class TextGeneratorController extends Controller
       public function generateText(TextGeneratorRequest $request)
 
       {
-
           TextGeneratorController::$wordsToGenerate=$request->input('wordsToGenerate',100);
           TextGeneratorController::$paragraphs=$request->input('paragraphs',3);
-          TextGeneratorController::$content=$request->input('content','loremIpsum');
+          TextGeneratorController::$content=$request->input('content','hamlet');
           $request->flash(); // This is cool! Send original values back to form
 
           TextGeneratorController::selectSource();
+
           TextGeneratorController::loadTextCorpus();
           TextGeneratorController::buildNGrams();
           for ($i = 0 ; $i < TextGeneratorController::$paragraphs; $i++){
@@ -226,6 +234,5 @@ class TextGeneratorController extends Controller
 
         $allParagraphs = TextGeneratorController::$allParagraphs;
         return view('textGenerator',compact('allParagraphs'));
-
       }
 }

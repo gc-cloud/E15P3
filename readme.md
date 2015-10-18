@@ -12,6 +12,8 @@ settings took place:
 - Describe views
 - Forms used to power the app were implemented using Blade and leveraging Laravel's HTTP Requests
 to get values, flash messages and produce sticky Forms
+- packages: using laravel collective html
+- packages: used laravel-debugbar
 
 ## Extra features
 - Compiled sass
