@@ -6,8 +6,8 @@
       <img class="first-slide" src="images/grayPeople.gif" alt="User Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>User Generator.</h1>
-          <p>Select your desired user characteristics! It is fun!</p>
+          <h1>MVC User Generator.</h1>
+          <p>Create fictional characters! It is fun!</p>
           {!! Form::open(array('route' => 'usergenerator', 'class' => 'form')) !!}
             {!! Form::submit('New User', array('class'=>'btn btn-primary')) !!}
           {!! Form::close() !!}
@@ -26,9 +26,9 @@
       <div class="col-xs-8">
         <h3>  {{$name}}  {{$surname}} </h3>
           <ul>
-            <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}</li>
-            <li class="glyphicon glyphicon-heart"> {{$hobby}}</li>
-            <li class="glyphicon glyphicon-envelope"> {{$name}}.{{$surname}}&#64;{{$email}}</li>
+            <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}  </li>
+            <li class="glyphicon glyphicon-heart"> {{$hobby}}  </li>
+            <li class="glyphicon glyphicon-envelope"> {{$email}}  </li>
           </ul>
 
       </div>

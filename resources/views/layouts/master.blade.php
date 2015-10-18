@@ -27,7 +27,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="css/developersBestFriend.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 
   </head>
 

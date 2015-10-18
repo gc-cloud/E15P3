@@ -21,7 +21,7 @@
       <img class="second-slide" src="images/grayPeople.gif" alt="User Generator">
       <div class="container">
         <div class="carousel-caption">
-          <h1>User Generator.</h1>
+          <h1>MVC User Generator.</h1>
           <p>Create fake users for testing, posing or for fun!</p>
           <p><a class="btn btn-lg btn-primary" href="usergenerator" role="button">Create</a></p>
         </div>

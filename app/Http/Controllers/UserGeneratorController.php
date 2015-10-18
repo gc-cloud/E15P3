@@ -46,8 +46,8 @@ public  function generateUser(){
     //  $photo = 'person1.jpg';
 
       $emailKey = mt_rand(1,Email_provider::count());
-      $email = Email_provider::find($emailKey)->email_provider;
-
+      $emailProvider = Email_provider::find($emailKey)->email_provider;
+      $email = strtolower($name.".".$surname."&#64;".$emailProvider);
 
       // Pass values to view
       return view('userGenerator',

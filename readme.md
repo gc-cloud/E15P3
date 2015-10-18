@@ -1,51 +1,80 @@
 ## Laravel PHP Project - P3
 
-This project uses Laravel 5. In addition to the basic "out of the box" the following configuration
-settings took place:  
-- Bootstrap/SASS styles were compiled using Elixir and Gulp (built on top of Node.js)
-- HTML helpers available
-- Coffee scripts
+Developers Best Friend helps developers generate random text, random users and
+random passwords.
 
-# Core features
-- Using _____package for web scraping
-- Flow: request -> routes -> controller -> view
-- Describe views
-- Forms used to power the app were implemented using Blade and leveraging Laravel's HTTP Requests
-to get values, flash messages and produce sticky Forms
-- packages: using laravel collective html
-- packages: used laravel-debugbar
-Route::get('logs', '\\Rap2hpoutre\\LaravelLogViewer\\LogViewerController@index');
+# Features by solution
+- Text generator:
+  This solution uses a custom class built by me that implements [n-grams](https://en.wikipedia.org/wiki/N-gram).
+  This class analyses text and builds a statistical model to predict the next word
+  given a key formed of previous words.  For example, let's build a model with N=3
+  for the text "your wish is my command, your wish is my desire, your wish is my order"
 
-## Extra features
-- Compiled sass
-- Using  mysql as the main data store
-- Used coffee scripts??
-- Used database seeders
-- User generator is powered by a MySQL database.  To build the database we leveraged Laravel's
-migrations and seeders.  To access the database we use RESTful controllers.
-- Installed and used HTML helpers from Laravel Collective??
-- Laravel HTTP Requests??/
-- The random text generator reads a text file and uses it to generate a structure of word groups called "n-grams" as a basis for generating seemingly "random" text that sounds like it was written by the same author of the text file.  
-- The n-gram algorithm
-uses maps and vector collections and selects words based on the probability of a particular word being used in the provided text file
-Preloaded n-grams include works from Hamlet, The Beatles and ___ This algorithm.  
+  key (prefix)      : potential words (suffix)
+  -----------------------------------------
+  your wish is      : my, my, my
+  wish is my        : command, desire, order
+  is my command     : your
+  my command your   : wish
+  command your wish : is
+  is my desire      : your
+  my desire your    : wish
+  desire your wish  : is
+  is my order       : your  (text is wrapped around to build the edge cases.)
+  my order your     : wish
+  order your wish   : is
 
-- Custom classes and methods to support passwordgenerator
-- Used Laravel's http requests methods for form handling and stickiness
+  To build the random text, we do the following
+  - pick a random prefix to start
+  - select a valid word from the list of suffixes
+  - select the next prefix by dropping the first word of the previous prefix and adding the suffix
+  - repeat until the desired number of words is produced
+
+  The effect of using this algorithm is that the random text resembles the style of the original
+  author.
+
+  The text generator comes with preloaded text for "Hamlet", "Song Lyrics" and "Lorem Impsum".
+  As a bonus feature, the text generator also has the ability to scrap content
+  from websites. To do the scrapping I leveraged an  open source function from Nadeau Software.
 
 
+- User Generator
+  This solution is a complete MVC implementation using routes, controllers, blade, Eloquent and MySql
+  - Database build was done usign Laravel's migrations
+  - Database elements were populated using Laravel's seeders
+  - The database contains separate tables for first names,
+    surnames, photos, hobbies and email domains
+  - Each table has a corresponding model that extends Eloquent.  Queries to each table are made
+    using the corresponding models
 
-## Official Documentation
+- Password Generator
+  As an extra challenge, I re-implemented my previous custom functions for password generator.
+  This time, the code was implemented on an object oriented fashion with a controller
+  that extends Laravel's controller.   
+  - Options for words, numbers and special characters
+  - Extra feature to select CamelCase
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
+# General features
+- The app uses bootstrap and bootstrap's carousel template.  The site is responsive
+and has uses javascript to implement a slide show of the three generators with
+left and right arrows, collapsable menus and other navigational aids.
+- All the requests leverage Laravel's routes, controllers and views.  The basic flow is
+  request -> routes -> controller -> view
+- The app is powered with HTML forms.  These forms were implemented using Blade
+- The text generator and the password generator forms leverage Laravel's http
+ requests and  flash messages to keep the values entered by the user
+- The app was built leveraging several packages including  laravel collective html,
+laravel-debugbar, and Rap2hpoutre's log viewer
+- All custom classes built by me use proper namespacing and are included within the
+  'app' folder to leverage Laravel's autoloading
+- All pages were checked using [W3c's Unicorn validator](https://validator.w3.org/)
 
 
 ### Acknowledgements
 - Theme based on bootstrap's carrousel template.
 - This app was built using the Laravel framework. The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-- Musical Text from Adele, Idina Menzel, Beatles
-
+- Song Lyrics from Adele, Idina Menzel, Beatles, Rolling Stones, Lady Gaga and Harvard
 - LoremIpsum text from http://lipsum.com
 - Images:
   - person1.jpg flickr Lorena by Noval Goya
