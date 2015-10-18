@@ -44,6 +44,6 @@
 
 @section('content')
   <div class="container">
-            <p>@if(!empty($allParagraphs)) {!!$allParagraphs!!} @endif</p>
+        @if(!empty($allParagraphs)) {!!$allParagraphs!!} @endif
   </div>
 @endsection

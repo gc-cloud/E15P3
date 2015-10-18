@@ -200,7 +200,7 @@ class TextGeneratorController extends Controller
 
           // End paragraph with "..." and add html tags
           array_push(TextGeneratorController::$textOutput,"...");
-          TextGeneratorController::$textOutput = "<br>".implode(" ",TextGeneratorController::$textOutput)."<br>";
+          TextGeneratorController::$textOutput = "<p>".implode(" ",TextGeneratorController::$textOutput)."</p>";
       }
 
 
