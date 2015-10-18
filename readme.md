@@ -10,7 +10,7 @@ random passwords.
 Please visit [p3.zudbu.com](http://p3.zudbu.com).  This domain is dedicated (currently) to my CSCIE15 work.
 
 ### Demo location
-Developer's Best Friend [video https://youtu.be/sJJcIBwy07A](https://youtu.be/sJJcIBwy07A) in youtube.
+Developer's Best Friend [video https://youtu.be/AZXvgetbxvw](https://youtu.be/AZXvgetbxvw) in youtube.
 
 ### Features by solution
 

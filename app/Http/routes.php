@@ -22,6 +22,4 @@ Route::match(['get','post'],'usergenerator',
 Route::match(['get','post'],'passwordgenerator',
     ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
 
-Route::get('acknowledgements', 'AcknowledgementsController@getIndex');
-
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
