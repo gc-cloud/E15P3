@@ -49,7 +49,6 @@
 @endsection
 
 @section ('content')
-    <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="images/randomText.gif" alt="we are random" width="140" height="140">
