@@ -1,30 +1,43 @@
-## Laravel PHP Project - P3
+# Laravel PHP Project - P3
 
-Developers Best Friend helps developers generate random text, random users and
+**Developers Best Friend*** helps developers generate random text, random users and
 random passwords.
 
-# Features by solution
-- Text generator:
+### Repository Location
+[GitHub gc-cloud E15](https://github.com/gc-cloud/E15P3)
+
+### Live Site Location
+Please visit [p3.zudbu.com](http://p3.zudbu.com).  This domain is dedicated (currently) to my CSCIE15 work.
+
+### Demo location
+Developer's Best Friend [video https://youtu.be/sJJcIBwy07A](https://youtu.be/sJJcIBwy07A) in youtube.
+
+### Features by solution
+
+#### Text generator:
   This solution uses a custom class built by me that implements [n-grams](https://en.wikipedia.org/wiki/N-gram).
   This class analyses text and builds a statistical model to predict the next word
   given a key formed of previous words.  For example, let's build a model with N=3
   for the text "your wish is my command, your wish is my desire, your wish is my order"
 
-  key (prefix)      : potential words (suffix)
-  -----------------------------------------
-  your wish is      : my, my, my
-  wish is my        : command, desire, order
-  is my command     : your
-  my command your   : wish
-  command your wish : is
-  is my desire      : your
-  my desire your    : wish
-  desire your wish  : is
-  is my order       : your  (text is wrapped around to build the edge cases.)
-  my order your     : wish
-  order your wish   : is
+|   key (prefix) 	|   potential words (suffix)	|   
+|-----	|---	|
+|______________|_____________________|
+|   your wish is 	|   my, my, my	|
+|  wish is my   	|   command, desire, order	|
+|  is my command 	|    your	|  
+|   my command your	|   wish	|  
+|   command your wish	|   is	|  
+ | is my desire| your|
+|  my desire your    | wish|
+|  desire your wish  | is|
+|  is my order       | your  |
+|  my order your     | wish|
+|  order your wish   | is|
 
-  To build the random text, we do the following
+Note how text is wrapped around to build the edge cases.
+
+To build the random text, we do the following
   - pick a random prefix to start
   - select a valid word from the list of suffixes
   - select the next prefix by dropping the first word of the previous prefix and adding the suffix
@@ -38,7 +51,7 @@ random passwords.
   from websites. To do the scrapping I leveraged an  open source function from Nadeau Software.
 
 
-- User Generator
+#### User Generator
   This solution is a complete MVC implementation using routes, controllers, blade, Eloquent and MySql
   - Database build was done usign Laravel's migrations
   - Database elements were populated using Laravel's seeders
@@ -47,7 +60,7 @@ random passwords.
   - Each table has a corresponding model that extends Eloquent.  Queries to each table are made
     using the corresponding models
 
-- Password Generator
+### Password Generator
   As an extra challenge, I re-implemented my previous custom functions for password generator.
   This time, the code was implemented on an object oriented fashion with a controller
   that extends Laravel's controller.   
@@ -55,7 +68,7 @@ random passwords.
   - Extra feature to select CamelCase
 
 
-# General features
+### General features
 - The app uses bootstrap and bootstrap's carousel template.  The site is responsive
 and has uses javascript to implement a slide show of the three generators with
 left and right arrows, collapsable menus and other navigational aids.
