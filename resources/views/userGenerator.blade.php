@@ -26,8 +26,8 @@
       <div class="col-xs-8">
         <h3>  {{$name}}  {{$surname}} </h3>
           <ul>
-            <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}</li><br>
-            <li class="glyphicon glyphicon-heart"> {{$hobby}}</li><br>
+            <li class="glyphicon glyphicon-calendar"> Born {{$birthDate}}</li>
+            <li class="glyphicon glyphicon-heart"> {{$hobby}}</li>
             <li class="glyphicon glyphicon-envelope"> {{$name}}.{{$surname}}&#64;{{$email}}</li>
           </ul>
 
