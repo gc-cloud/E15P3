@@ -16,6 +16,36 @@ select {
   color: #555;
 }
 
+
+/* User Generator
+-------------------------------------------------- */
+
+
+.pictureContainer {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+  }
+
+.userPicture {
+    margin: 10px;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+}
+
+.userSummary{
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+}
+
+.bullet {
+  display: block;
+  padding: 5px;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
