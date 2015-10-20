@@ -62,7 +62,7 @@
   <div class="container">
     <div class="row">
             @if(!empty($message)) <h3 class="glyphicon glyphicon-lock"> {{$message}}  </h3> @endif
-          <h3> @if(!empty($password)) {{$password}} @endif</h3>
+          <h3 > @if(!empty($password)) {{$password}} @endif</h3>
     </div>
   </div>
 @endsection
