@@ -6,7 +6,7 @@
       <img class="first-slide" src="images/paperGray.jpg" alt="Text Generator">
       <div class="container">
         <div class="jumbotron">
-          <!-- Display success message with new password-->
+          {{-- Display success message with new password--}}
         <div class="carousel-caption">
           <h3> Generate random text that mimics the original author!</h3>
           {!! Form::open(array('route' => 'textgenerator', 'class' => 'form')) !!}

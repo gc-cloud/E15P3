@@ -51,17 +51,17 @@
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="images/randomText.gif" alt="we are random" width="140" height="140">
+          <img class="img-circle picture" src="images/randomText.gif" alt="we are random" >
           <h2>n-Gram Text Generator</h2>
           <p><a class="btn btn-default" href="textgenerator" role="button">Generate Text &raquo;</a></p>
         </div>
         <div class="col-lg-4">
-          <img class="img-circle" src="images/person1.jpg" alt="random user" width="140" height="140">
+          <img class="img-circle picture" src="images/person1.jpg" alt="random user" >
           <h2>User Generator</h2>
           <p><a class="btn btn-default" href="usergenerator" role="button">New User &raquo;</a></p>
         </div>
         <div class="col-lg-4">
-          <img class="img-circle" src="images/oldLock.jpg" alt="random password" width="140" height="140">
+          <img class="img-circle picture" src="images/oldLock.jpg" alt="random password" >
           <h2>Password Generator</h2>
           <p><a class="btn btn-default" href="passwordgenerator" role="button">New Password &raquo;</a></p>
         </div>

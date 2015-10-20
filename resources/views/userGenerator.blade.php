@@ -21,7 +21,7 @@
 <div class="container">
   <div class="pictureContainer">
   <!-- <div class="col-xs-6"> -->
-  @if(!empty($photo))  {!! HTML::image('images/'.$photo , 'a picture', array('class'=>'img-circle userPicture ')) !!} @endif
+  @if(!empty($photo))  {!! HTML::image('images/'.$photo , 'a picture', array('class'=>'img-circle picture ')) !!} @endif
   </div>
   <!-- </div> -->
   <div class="userSummary">

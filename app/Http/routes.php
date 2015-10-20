@@ -22,4 +22,8 @@ Route::match(['get','post'],'usergenerator',
 Route::match(['get','post'],'passwordgenerator',
     ['as' => 'passwordgenerator', 'uses' => 'PasswordGeneratorController@generatePassword']);
 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+/* Show logs only in local environment */
+
+if(App::environment('local')) {
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+};
