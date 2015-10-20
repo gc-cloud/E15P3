@@ -66,7 +66,7 @@ To build the random text, we do the following:
   - The tables for first names and photos contain a column to identify the relevant gender.  This
     way we can generate random users whose names match the photos.
 
-### Password Generator
+#### Password Generator
   As an extra challenge, I re-implemented my previous custom functions for password generator.
   This time, the code was implemented using an object oriented approach extendings Laravel's controller class.   
   - Options for words, numbers and special characters
